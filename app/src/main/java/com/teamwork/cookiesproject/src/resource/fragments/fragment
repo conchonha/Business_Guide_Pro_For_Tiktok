@@ -1,0 +1,1 @@
+fragment giống như view cũng có vòng đời và chỉ được gọi trong activity

@@ -1,0 +1,6 @@
+
+text_size : res->values->dimens
+text_string: res->values->strings
+text_color: res->value->colors
+img + icon : res->drawable
+animation : res->anim
