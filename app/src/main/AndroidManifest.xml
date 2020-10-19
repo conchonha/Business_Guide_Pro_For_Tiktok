@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.teamwork.businessguideprofortiktok.src.resource.pages.main_page.MainActivity"/>
-        <activity android:name="com.teamwork.businessguideprofortiktok.src.resource.pages.introduce_page.IntroduceActivity">
+        <activity android:name=".src.resource.pages.face_page.FacebookActivity"></activity>
+        <activity android:name=".src.resource.pages.main_page.MainActivity" />
+        <activity android:name=".src.resource.pages.introduce_page.IntroduceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
