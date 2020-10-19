@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="sizeTitle">20sp</dimen>
-    <dimen name="sizeContent">10sp</dimen>
-    <dimen name="sizeName">12sp</dimen>
-    <dimen name="TitleName">18sp</dimen>
+    <dimen name="size0">10sp</dimen>
+    <dimen name="size1">12sp</dimen>
+    <dimen name="size2">14sp</dimen>
+    <dimen name="size3">16sp</dimen>
+    <dimen name="size4">18sp</dimen>
 </resources>
