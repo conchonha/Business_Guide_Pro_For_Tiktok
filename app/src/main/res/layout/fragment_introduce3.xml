@@ -56,7 +56,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:background="@drawable/boder_button"
-        android:text="@string/txt_get_creadit"
+        android:text="@string/txt_signin_priview"
         android:textColor="@color/color_white"
         android:textSize="15dp" />
 </LinearLayout>
