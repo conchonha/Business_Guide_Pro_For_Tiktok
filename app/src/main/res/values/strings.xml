@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">CookiesProject</string>
+    //textview priview app
+    //textview register app
+    <string name="txt_title_register">Register new account</string>
+    <string name="txt_select_country">Your billing country/region</string>
+    <string name="txt_classify_account">This account is primarity used to</string>
+    <string name="txt_option1">A business,to promote goods and ser</string>
+    <string name="txt_option2">A individual,to promote personal websites or pages</string>
+    <string name="txt_birthday">Birthday</string>
+    <string name="txt_email_register">Email</string>
+    <string name="txt_phone_register">Phone Number</string>
+    <string name="txt_confirm_pass">Confirm Password</string>
+    <string name="txt_create_acc">Create new account</string>
 </resources>
