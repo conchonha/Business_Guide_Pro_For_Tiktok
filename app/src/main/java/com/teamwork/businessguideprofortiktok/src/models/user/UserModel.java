@@ -8,15 +8,6 @@ public class UserModel {
     String mBirthday;
     String mCountry;
 
-    public UserModel(String mEmail, String mPhonenumber, String mPassword, String mConfirmPass, String mBirthday, String mCountry) {
-        this.mEmail = mEmail;
-        this.mPhonenumber = mPhonenumber;
-        this.mPassword = mPassword;
-        this.mConfirmPass = mConfirmPass;
-        this.mBirthday = mBirthday;
-        this.mCountry = mCountry;
-    }
-
     public String getmEmail() {
         return mEmail;
     }

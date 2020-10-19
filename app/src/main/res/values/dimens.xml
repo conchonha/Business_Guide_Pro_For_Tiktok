@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="size0">10sp</dimen>
-    <dimen name="size1">12sp</dimen>
-    <dimen name="size2">14sp</dimen>
-    <dimen name="size3">16sp</dimen>
-    <dimen name="size4">18sp</dimen>
-    <dimen name="sizeTitleFB">20sp</dimen>
+    <dimen name="size10">10sp</dimen>
+    <dimen name="size12">12sp</dimen>
+    <dimen name="size14">14sp</dimen>
+    <dimen name="size16">16sp</dimen>
+    <dimen name="size18">18sp</dimen>
+    <dimen name="size20">20sp</dimen>
 </resources>

@@ -26,4 +26,8 @@
     <string name="txt_create_acc">Create new account</string>
     <string name="txt_select_all_country">Select a country</string>
     <string name="search">Search...</string>
+
+    //textview login facebook
+    <string name="txt_title_loginfb">Your Balance</string>
+
 </resources>

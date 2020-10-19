@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="c"
     tools:context="com.teamwork.businessguideprofortiktok.src.resource.pages.loginfb_page.LoginFacebook">
     <TextView
         android:id="@+id/txt_Title"
-        android:text="Your Balance"
+        android:text="@string/txt_title_loginfb"
         android:gravity="center"
         android:textStyle="bold"
+        android:textColor="@color/color_txt_name1"
         android:textSize="@dimen/sizeTitleFB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
