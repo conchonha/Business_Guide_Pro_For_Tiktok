@@ -10,8 +10,8 @@
 
     //textview login app
     <string name="txt_signin">Sign-in</string>
-    <string name="txt_mail_or_phone">Email or Phone number</string>
-    <string name="txt_pass">Password</string>
+    <string name="txt_mail_or_phone">Email or Phone number </string>
+    <string name="txt_pass">Password </string>
 
     //textview register app
     <string name="txt_title_register">Register new account</string>
