@@ -4,13 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.os.Handler;
 
 import com.teamwork.businessguideprofortiktok.R;
 import com.teamwork.businessguideprofortiktok.src.resource.adapters.introduce_adapter.IntroduceAdapter;
 
 
 public class IntroduceActivity extends AppCompatActivity {
-    private ViewPager mIntroduceViewpager;
+    public static ViewPager mIntroduceViewpager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,4 +25,6 @@ public class IntroduceActivity extends AppCompatActivity {
         mIntroduceViewpager = findViewById(R.id.introduce_viewpager);
         mIntroduceViewpager.setAdapter(adapter);
     }
+
+
 }
