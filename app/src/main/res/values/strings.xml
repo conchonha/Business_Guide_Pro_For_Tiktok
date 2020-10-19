@@ -1,6 +1,18 @@
 <resources>
-    <string name="app_name">CookiesProject</string>
+    <string name="app_name">Business Guide Pro for Tiktok</string>
     //textview priview app
+    <string name="txt_signin_priview">Sign in</string>
+    <string name="txt_title_priview01">Tiktok Back to Business Program</string>
+    <string name="txt_title_priview02">We are committed to helping SMBs get through the challenging
+        times and stay connected with customers.That is why we are offering $100M USD in ad credits
+        to help SMB owners restart their business</string>
+    <string name="txt_get_creadit">Get Creadit</string>
+
+    //textview login app
+    <string name="txt_signin">Sign-in</string>
+    <string name="txt_mail_or_phone">Email or Phone number</string>
+    <string name="txt_pass">Password</string>
+
     //textview register app
     <string name="txt_title_register">Register new account</string>
     <string name="txt_select_country">Your billing country/region</string>
@@ -12,4 +24,6 @@
     <string name="txt_phone_register">Phone Number</string>
     <string name="txt_confirm_pass">Confirm Password</string>
     <string name="txt_create_acc">Create new account</string>
+    <string name="txt_select_all_country">Select a country</string>
+    <string name="search">Search...</string>
 </resources>
