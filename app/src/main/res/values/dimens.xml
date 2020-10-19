@@ -5,4 +5,5 @@
     <dimen name="size2">14sp</dimen>
     <dimen name="size3">16sp</dimen>
     <dimen name="size4">18sp</dimen>
+    <dimen name="sizeTitleFB">20sp</dimen>
 </resources>

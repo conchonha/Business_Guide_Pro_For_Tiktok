@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.teamwork.businessguideprofortiktok.src.resource.pages.face_page.FacebookActivity">
+    tools:context="com.teamwork.businessguideprofortiktok.src.resource.pages.webview_page.WebViewFB">
         <WebView
             android:id="@+id/webViewFB"
             android:layout_width="match_parent"

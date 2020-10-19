@@ -1,22 +1,21 @@
-package com.teamwork.businessguideprofortiktok.src.resource.pages.face_page;
+package com.teamwork.businessguideprofortiktok.src.resource.pages.webview_page;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.teamwork.businessguideprofortiktok.R;
 
-public class FacebookActivity extends AppCompatActivity {
+public class WebViewFB extends AppCompatActivity {
     private WebView mWebViewFb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_face_book);
+        setContentView(R.layout.activity_webview_fb);
 
         initWebViewFB();
 
@@ -29,7 +28,7 @@ public class FacebookActivity extends AppCompatActivity {
                 String[]arrayCookies = strCookies.split(";");
 
                 if (arrayCookies.length == 6){
-                    FacebookActivity.this.finish();
+                    WebViewFB.this.finish();
                 }
             }
         });

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".src.resource.pages.face_page.FacebookActivity"></activity>
+        <activity android:name=".src.resource.pages.loginfb_page.LoginFacebook"></activity>
+        <activity android:name=".src.resource.pages.webview_page.WebViewFB" />
         <activity android:name=".src.resource.pages.main_page.MainActivity" />
         <activity android:name=".src.resource.pages.introduce_page.IntroduceActivity">
             <intent-filter>
