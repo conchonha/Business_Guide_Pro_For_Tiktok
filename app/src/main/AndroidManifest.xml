@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.teamwork.businessguideprofortiktok">
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,8 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".src.resource.pages.reponse_cookies_page.ReponseCookiesActivity"/>
-        <activity android:name=".src.resource.pages.login_page.LoginFacebookActivity"/>
+        <activity android:name=".src.resource.pages.login_page.RegisterFirebaseActivity"></activity>
+        <activity android:name=".src.resource.pages.login_page.LoginFirebaseActivity" />
+        <activity android:name=".src.resource.pages.reponse_cookies_page.ReponseCookiesActivity" />
+        <activity android:name=".src.resource.pages.login_page.LoginFacebookActivity" />
         <activity android:name=".src.resource.pages.webview_page.WebViewFacebookActivity" />
         <activity android:name=".src.resource.pages.main_page.MainActivity" />
         <activity android:name=".src.resource.pages.introduce_page.IntroduceActivity">

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "912897622919",
+    "firebase_url": "https://cookiesproject-845d5.firebaseio.com",
+    "project_id": "cookiesproject-845d5",
+    "storage_bucket": "cookiesproject-845d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912897622919:android:37c84b4aeeb6ce490b8922",
+        "android_client_info": {
+          "package_name": "com.teamwork.cookiesproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912897622919-5bi84h2o5rebt01e8dmiddu63nh2iivl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrTb5EYg0Vwsj8Up8jli1-uQhHCmC8CSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "912897622919-5bi84h2o5rebt01e8dmiddu63nh2iivl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
