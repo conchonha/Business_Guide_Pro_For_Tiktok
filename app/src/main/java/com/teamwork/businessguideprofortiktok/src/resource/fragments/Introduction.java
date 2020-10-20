@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.introduce_fragment1;
+package com.teamwork.businessguideprofortiktok.src.resource.fragments;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,7 +15,7 @@ import com.teamwork.businessguideprofortiktok.R;
 import com.teamwork.businessguideprofortiktok.src.resource.pages.introduce_page.IntroduceActivity;
 
 
-public class IntroduceFragment1 extends Fragment {
+public class Introduction extends Fragment {
     private View view;
     private Button BtnSingIn, BtnGetCreate;
     private Handler handler;

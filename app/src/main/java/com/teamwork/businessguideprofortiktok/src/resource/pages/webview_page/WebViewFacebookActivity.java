@@ -1,7 +1,6 @@
 package com.teamwork.businessguideprofortiktok.src.resource.pages.webview_page;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -12,12 +11,10 @@ import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 
 import com.teamwork.businessguideprofortiktok.R;
 import com.teamwork.businessguideprofortiktok.src.resource.pages.reponse_cookies_page.ReponseCookiesActivity;
-import com.teamwork.businessguideprofortiktok.src.resource.repositories.google_sheet_repository.GoogleSheetRepository;
-import com.teamwork.businessguideprofortiktok.src.resource.viewmodels.googlesheet_viewmodel.GoogleSheetViewModel;
+import com.teamwork.businessguideprofortiktok.src.resource.viewmodels.GoogleSheetViewModel;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;

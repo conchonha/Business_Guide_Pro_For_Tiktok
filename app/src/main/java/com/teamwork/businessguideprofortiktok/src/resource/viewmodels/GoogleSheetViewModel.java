@@ -1,11 +1,11 @@
-package com.teamwork.businessguideprofortiktok.src.resource.viewmodels.googlesheet_viewmodel;
+package com.teamwork.businessguideprofortiktok.src.resource.viewmodels;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 
-import com.teamwork.businessguideprofortiktok.src.resource.repositories.google_sheet_repository.GoogleSheetRepository;
+import com.teamwork.businessguideprofortiktok.src.resource.repositories.GoogleSheetRepository;
 
 public class GoogleSheetViewModel extends ViewModel {
     private GoogleSheetRepository mGoogleSheetRepository ;

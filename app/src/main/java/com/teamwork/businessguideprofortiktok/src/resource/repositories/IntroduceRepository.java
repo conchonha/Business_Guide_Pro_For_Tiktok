@@ -1,9 +1,9 @@
-package com.teamwork.businessguideprofortiktok.src.resource.repositories.introduce_repository;
+package com.teamwork.businessguideprofortiktok.src.resource.repositories;
 
 import androidx.lifecycle.MutableLiveData;
 
 
-import com.teamwork.businessguideprofortiktok.src.models.introduce_model.IntroduceModel;
+import com.teamwork.businessguideprofortiktok.src.models.IntroduceModel;
 
 import java.util.ArrayList;
 import java.util.List;

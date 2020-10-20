@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.introduce_fragment2;
+package com.teamwork.businessguideprofortiktok.src.resource.fragments;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ import com.teamwork.businessguideprofortiktok.src.utils.Validations;
 import java.util.Calendar;
 
 
-public class IntroduceFragment2 extends Fragment {
+public class Register extends Fragment {
     private View view;
     private RadioButton mRadioBtnOption1, mRadioBtnOption2;
     private EditText mEdittextEmail, mEdittextPhone, mEdittextPass, mEdittextConfirmPass ;

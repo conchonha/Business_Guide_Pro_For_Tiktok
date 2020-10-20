@@ -7,6 +7,7 @@
         times and stay connected with customers.That is why we are offering $100M USD in ad credits
         to help SMB owners restart their business</string>
     <string name="txt_get_creadit">Get Credit</string>
+    <string name="txt_full_text" translatable="false"> Please fill out the form</string>
 
     //textview login app
     <string name="txt_signin">Sign in</string>

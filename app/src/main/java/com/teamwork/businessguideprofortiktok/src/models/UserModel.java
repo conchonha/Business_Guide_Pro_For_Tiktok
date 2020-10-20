@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.models.user;
+package com.teamwork.businessguideprofortiktok.src.models;
 
 public class UserModel {
     String mEmail;

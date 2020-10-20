@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.repositories.google_sheet_repository;
+package com.teamwork.businessguideprofortiktok.src.resource.repositories;
 
 import android.util.Log;
 

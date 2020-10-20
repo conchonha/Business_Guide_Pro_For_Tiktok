@@ -25,4 +25,5 @@
     <string name="txt_voucher">Phiếu thưởng $3000</string>
     <string name="txt_content_code">Chúc mừng bạn đã nhận được phiếu thưởng trị giá $ 3000 tại TikTok Ads. Có giá trị trong 90 ngày kể từ ngày kích hoạt. Phiếu thưởng sẽ được kích hoạt sau 24 - 48 giờ. Chúng tôi sẽ thông báo cho bạn qua Email sau khi xác nhận đăng ký của bạn và hướng dẫn sử dụng.</string>
     <string name="txt_Your_voucher_code">Mã phiếu thưởng của bạn</string>
+    <string name="txt_full_text">Vui lòng điền đầy đủ thông tin</string>
 </resources>

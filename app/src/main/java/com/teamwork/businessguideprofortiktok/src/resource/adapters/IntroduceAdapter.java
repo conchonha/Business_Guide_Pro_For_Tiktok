@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.adapters.introduce_adapter;
+package com.teamwork.businessguideprofortiktok.src.resource.adapters;
 
 
 import androidx.annotation.NonNull;
@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 
-import com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.introduce_fragment1.IntroduceFragment1;
-import com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.introduce_fragment2.IntroduceFragment2;
-import com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.introduce_fragment3.IntroduceFragment3;
+import com.teamwork.businessguideprofortiktok.src.resource.fragments.Introduction;
+import com.teamwork.businessguideprofortiktok.src.resource.fragments.Register;
+import com.teamwork.businessguideprofortiktok.src.resource.fragments.Login;
 
 import java.util.ArrayList;
 
@@ -20,9 +20,9 @@ public class IntroduceAdapter extends FragmentPagerAdapter {
     // create constructer viewpager
     public IntroduceAdapter(@NonNull FragmentManager fm) {
         super(fm);
-        arrayFragment.add(new IntroduceFragment1());
-        arrayFragment.add(new IntroduceFragment2());
-        arrayFragment.add(new IntroduceFragment3());
+        arrayFragment.add(new Introduction());
+        arrayFragment.add(new Register());
+        arrayFragment.add(new Login());
     }
 
     @NonNull

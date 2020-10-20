@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.introduce_fragment3;
+package com.teamwork.businessguideprofortiktok.src.resource.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +19,7 @@ import com.teamwork.businessguideprofortiktok.src.resource.pages.login_page.Logi
 import com.teamwork.businessguideprofortiktok.src.utils.Validations;
 
 
-public class IntroduceFragment3 extends Fragment {
+public class Login extends Fragment {
     private View view;
     private EditText mEdittextEmail, mEdittextPass;
     private Button ButtonGetCreate;
