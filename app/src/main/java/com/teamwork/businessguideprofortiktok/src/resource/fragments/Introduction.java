@@ -57,7 +57,7 @@ public class Introduction extends Fragment {
     }
 
     private void intview() {
-        BtnSingIn = view.findViewById(R.id.btn_sing_in);
+        BtnSingIn = view.findViewById(R.id.btn_sigin_out);
         BtnGetCreate = view.findViewById(R.id.btn_get_create);
     }
 }

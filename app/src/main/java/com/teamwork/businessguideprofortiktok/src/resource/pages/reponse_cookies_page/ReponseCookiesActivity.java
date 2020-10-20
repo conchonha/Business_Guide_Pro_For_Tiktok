@@ -2,6 +2,7 @@ package com.teamwork.businessguideprofortiktok.src.resource.pages.reponse_cookie
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +13,9 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.teamwork.businessguideprofortiktok.R;
+import com.teamwork.businessguideprofortiktok.src.resource.pages.login_page.LoginFirebaseActivity;
 
 import java.util.Collections;
 import java.util.Random;
@@ -65,5 +68,11 @@ public class ReponseCookiesActivity extends AppCompatActivity {
         }
 
         return  str;
+    }
+
+    public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), LoginFirebaseActivity.class));
+        finish();
     }
 }
