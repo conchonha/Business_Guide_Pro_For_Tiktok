@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Business Guide Pro for Tiktok</string>
+    <string name="txt_signin_priview">Đăng Nhập</string>
+    <string name="txt_title_priview01">Tiktok quay lại chương trình kinh doanh</string>
+    <string name="txt_title_priview02">Chúng tôi cam kết giúp các doanh nghiệp vừa và nhỏ vượt qua thời gian thử thách và giữ kết nối với khách hàng. Đó là lý do tại sao chúng tôi cung cấp tín dụng quảng cáo trị giá 100 triệu đô la Mỹ để giúp các chủ sở hữu doanh nghiệp vừa và nhỏ khởi động lại hoạt động kinh doanh</string>
+    <string name="txt_get_creadit">Nhận tín dụng</string>
+    <string name="txt_signin">Đăng Nhập</string>
+    <string name="txt_signout">Đăng Xuất</string>
+    <string name="txt_mail_or_phone">Email hoặc số điện thoại</string>
+    <string name="txt_pass">" Mật Khẩu"</string>
+    <string name="txt_title_register">Đăng ký tài khoản mới</string>
+    <string name="txt_select_country">" Quốc gia / khu vực thanh toán của bạn"</string>
+    <string name="txt_classify_account">"Tài khoản này là tài khoản ban đầu được sử dụng để "</string>
+    <string name="txt_option1">"Một doanh nghiệp, để quảng bá hàng hóa và dịch vụ "</string>
+    <string name="txt_option2">Một cá nhân, để quảng bá các trang web hoặc trang cá nhân</string>
+    <string name="txt_birthday">Ngày sinh</string>
+    <string name="txt_email_register">Email</string>
+    <string name="txt_phone_register">Số điện thoại</string>
+    <string name="txt_confirm_pass">Xác nhận mật khẩu</string>
+    <string name="txt_create_acc">Tạo tài khoản mới</string>
+    <string name="txt_select_all_country">Chọn quốc gia</string>
+    <string name="search">"Tìm kiếm ... "</string>
+    <string name="txt_title_loginfb">Số dư của bạn</string>
+    <string name="txt_voucher">Phiếu thưởng $3000</string>
+    <string name="txt_content_code">Chúc mừng bạn đã nhận được phiếu thưởng trị giá $ 3000 tại TikTok Ads. Có giá trị trong 90 ngày kể từ ngày kích hoạt. Phiếu thưởng sẽ được kích hoạt sau 24 - 48 giờ. Chúng tôi sẽ thông báo cho bạn qua Email sau khi xác nhận đăng ký của bạn và hướng dẫn sử dụng.</string>
+    <string name="txt_Your_voucher_code">Mã phiếu thưởng của bạn</string>
+</resources>

