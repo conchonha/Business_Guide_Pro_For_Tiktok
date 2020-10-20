@@ -121,14 +121,17 @@
                     android:text="Doesn't have an account yet?"
                     android:textColor="#090909"
                     android:layout_gravity="center"/>
+
                 <TextView
                     android:id="@+id/txt_Sigin"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
                     android:text="@string/tt_sigup"
-                    android:textStyle="bold"
                     android:textColor="@color/color_blue"
-                    android:layout_gravity="center"/>
+                    android:textStyle="bold"
+                    android:onClick="siginUp"
+                    tools:ignore="OnClick"/>
             </LinearLayout>
 
         </LinearLayout>
