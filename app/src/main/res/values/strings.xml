@@ -31,6 +31,7 @@
     //textview login facebook
     <string name="txt_title_loginfb">Your Balance</string>
     <string name="txt_voucher">Voucher $3000</string>
-    <string name="txt_full_text">Please complete the form to continue </string>
+    <string name="txt_3000" translatable="false">$ 3000</string>
+    <string name="txt_content_code">Congratulations on receiving your $3000 voucher at the TikTok Ads.         Valid for 90 days from the date of activation. Voucher will be activated after 24 - 48 hours.         We will notify you via Email after confirmation your registration and users guide.</string>
 
 </resources>

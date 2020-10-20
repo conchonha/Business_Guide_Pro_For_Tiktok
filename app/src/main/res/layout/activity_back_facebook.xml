@@ -13,6 +13,7 @@
     >
 
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
@@ -20,7 +21,7 @@
             android:layout_height="wrap_content"
             android:padding="2dp"
             android:layout_centerVertical="true"
-            android:textSize="@dimen/size14"
+            android:textSize="@dimen/size12"
             android:textColor="#fff"
             android:textStyle="bold"
             android:text="@string/app_name"/>
@@ -54,41 +55,54 @@
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="$0"
+        android:text="@string/txt_3000"
         android:textStyle="bold"
         android:textColor="@color/color_blue"
-        android:textSize="30dp"/>
+        android:textSize="@dimen/size30"/>
 
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:layout_marginTop="@dimen/size20"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        app:cardBackgroundColor="@color/color_blue"
-        app:cardCornerRadius="30dp"
-        android:foreground="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:onClick="login">
-        <RelativeLayout
+        android:orientation="vertical"
+        android:background="@drawable/boder_text_fb"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <TextView
+            android:padding="@dimen/size10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_content_code"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/size14"/>
+        <TextView
+            android:padding="@dimen/size10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_Your_voucher_code"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/size14"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <com.makeramen.roundedimageview.RoundedImageView
-                android:layout_width="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_facebook"
-                android:layout_marginLeft="15dp" />
             <TextView
-                android:paddingLeft="10dp"
-                android:textStyle="bold"
-                android:textSize="@dimen/size18"
-                android:layout_centerInParent="true"
-                android:textColor="@color/color_white"
+                android:id="@+id/txtRandom"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/txt_voucher"/>
-        </RelativeLayout>
+                android:layout_height="@dimen/size30"
+                android:textSize="@dimen/size25"
+                android:textColor="@color/color_white"
+                android:text="TEST"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+            <ImageView
+                android:id="@+id/imgCopy"
+                android:layout_marginLeft="@dimen/size20"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size30"
+                android:src="@drawable/ic_copy"/>
 
-    </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
 
 
 

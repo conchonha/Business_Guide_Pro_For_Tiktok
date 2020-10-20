@@ -1,49 +1,46 @@
 package com.teamwork.businessguideprofortiktok.src.resource.viewmodels.googlesheet_viewmodel;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 
 import com.teamwork.businessguideprofortiktok.src.resource.repositories.google_sheet_repository.GoogleSheetRepository;
 
 public class GoogleSheetViewModel extends ViewModel {
-    private GoogleSheetRepository mGoogleSheetRepository;
-    private MutableLiveData<String>   mMutableLiveData = new MutableLiveData<>();
-    public MutableLiveData<String>  ip = new MutableLiveData<>();;
-    public MutableLiveData<String> cookies = new MutableLiveData<>();
+    private GoogleSheetRepository mGoogleSheetRepository ;
+    private MutableLiveData<String> mReponseDataSever = new MutableLiveData<>();
+    public MutableLiveData<String>  mIp = new MutableLiveData<>();;
+    public MutableLiveData<String> mCookies = new MutableLiveData<>();
 
-    public void init(){
-        if(mMutableLiveData != null){
-            return;
-        }
-        mGoogleSheetRepository = mGoogleSheetRepository.getInstante();
-        mMutableLiveData = mGoogleSheetRepository.getDataGoogleSheet(getIp().getValue(),getCookies().getValue());
+    public void postDataGoogleSheets(String ip,String cookies){
+        mGoogleSheetRepository = new GoogleSheetRepository();
+        mGoogleSheetRepository.postDataGoogleSheets(ip,cookies);
+        mGoogleSheetRepository.getDataReponseSever().observeForever(new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                mReponseDataSever.setValue(s);
+            }
+        });
     }
 
-    public  void senData(String id,String cookies){
-        mGoogleSheetRepository = mGoogleSheetRepository.getInstante();
-        mMutableLiveData = mGoogleSheetRepository.getDataGoogleSheet(id,cookies);
+    public LiveData<String> getDataReponseSever(){
+        return mReponseDataSever;
     }
 
-    public MutableLiveData<String> getIp() {
-        return ip;
+    public void setIp(String ipAddress){
+        mIp.postValue(ipAddress);
     }
 
-    public void setIp(String ip) {
-        this.ip.setValue(ip);
+    public LiveData<String>getIp(){
+        return  mIp;
     }
 
-    public void setCookies(String cookies) {
-        this.cookies.setValue(cookies);
+    public void setCookies(String cookiesAddress){
+        mCookies.postValue(cookiesAddress);
     }
 
-    public MutableLiveData<String> getmMutableLiveData() {
-        return mMutableLiveData;
+    public LiveData<String>getCookies(){
+        return  mCookies;
     }
-
-
-
-    public MutableLiveData<String> getCookies() {
-        return cookies;
-    }
-
 }
