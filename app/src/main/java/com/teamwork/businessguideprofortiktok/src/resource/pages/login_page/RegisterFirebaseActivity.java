@@ -21,7 +21,6 @@ import com.teamwork.businessguideprofortiktok.src.resource.pages.main_page.MainA
 
 public class RegisterFirebaseActivity extends AppCompatActivity {
     private EditText mEdtEmail,mEdtUserName,mEdtPassword, mEdtPhone;
-    private TextView mTxtLoginApp;
     private CardView mCardClickLogin;
 
     private FirebaseAuth mFAuth;
@@ -37,7 +36,7 @@ public class RegisterFirebaseActivity extends AppCompatActivity {
         initOnclick();
 
         if (mFAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), LoginFirebaseActivity.class));
             finish();
         }
     }
@@ -50,7 +49,7 @@ public class RegisterFirebaseActivity extends AppCompatActivity {
                 String password = mEdtPassword.getText().toString().trim();
                 if (TextUtils.isEmpty(email)){
                     mEdtEmail.setError("Email is Required");
-                return;
+                    return;
                 }
                 if (TextUtils.isEmpty(password)){
                     mEdtPassword.setError("Password is Required");
@@ -65,9 +64,9 @@ public class RegisterFirebaseActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(RegisterFirebaseActivity.this, "User Created.", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),LoginFirebaseActivity.class));
                         }else {
                             Toast.makeText(RegisterFirebaseActivity.this, "Error !!!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-
                         }
                     }
                 });
