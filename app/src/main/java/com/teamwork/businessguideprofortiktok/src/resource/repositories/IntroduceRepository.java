@@ -3,7 +3,7 @@ package com.teamwork.businessguideprofortiktok.src.resource.repositories;
 import androidx.lifecycle.MutableLiveData;
 
 
-import com.teamwork.businessguideprofortiktok.src.models.IntroduceModel;
+import com.teamwork.businessguideprofortiktok.src.models.introduce_model.IntroduceModel;
 
 import java.util.ArrayList;
 import java.util.List;

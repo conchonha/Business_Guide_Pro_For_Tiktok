@@ -6,7 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 
 import com.teamwork.businessguideprofortiktok.R;
-import com.teamwork.businessguideprofortiktok.src.resource.adapters.IntroduceAdapter;
+import com.teamwork.businessguideprofortiktok.src.resource.adapters.introduce_adapter.IntroduceAdapter;
 
 
 public class IntroduceActivity extends AppCompatActivity {

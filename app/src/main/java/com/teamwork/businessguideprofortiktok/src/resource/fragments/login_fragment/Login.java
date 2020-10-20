@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.fragments;
+package com.teamwork.businessguideprofortiktok.src.resource.fragments.login_fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,8 @@ import androidx.fragment.app.Fragment;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.teamwork.businessguideprofortiktok.R;
-import com.teamwork.businessguideprofortiktok.src.compoments.TextChangeListener;
-import com.teamwork.businessguideprofortiktok.src.resource.pages.login_page.LoginFacebookActivity;
+import com.teamwork.businessguideprofortiktok.src.compoments.text_watcher_compoments.TextChangeListener;
+import com.teamwork.businessguideprofortiktok.src.resource.pages.login_facebook_page.LoginFacebookActivity;
 import com.teamwork.businessguideprofortiktok.src.utils.Validations;
 
 

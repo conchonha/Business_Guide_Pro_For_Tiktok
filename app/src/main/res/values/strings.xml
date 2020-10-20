@@ -40,6 +40,15 @@
     <string name="tt_app" translatable="false">Business Guide</string>
     <string name="tt_sigup" translatable="false">Sign Up</string>
     <string name="txt_Your_voucher_code">Voucher</string>
-
+    <string name="txt_ok" translatable="false">Ok</string>
+    <string name="txt_agree" translatable="false">Agree</string>
+    <string name="txt_login_success" translatable="false">Login Success</string>
+    <string name="txt_login_err" translatable="false">Login Error</string>
+    <string name="txt_email_invalid" translatable="false">Email invalidate</string>
+    <string name="txt_password_invalid" translatable="false">PassWord invalidate</string>
+    <string name="txt_name_invalid" translatable="false">Name invalidate</string>
+    <string name="txt_phone_invalid" translatable="false">Phone invalidate</string>
+    <string name="txt_register_success" translatable="false">Register Success</string>
+    <string name="txt_register_error" translatable="false">Account registration is not successful please check again</string>
 
 </resources>

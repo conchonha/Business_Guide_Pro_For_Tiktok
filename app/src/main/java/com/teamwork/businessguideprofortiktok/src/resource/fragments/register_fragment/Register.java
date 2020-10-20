@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.fragments;
+package com.teamwork.businessguideprofortiktok.src.resource.fragments.register_fragment;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
@@ -13,11 +13,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.teamwork.businessguideprofortiktok.R;
-import com.teamwork.businessguideprofortiktok.src.compoments.TextChangeListener;
+import com.teamwork.businessguideprofortiktok.src.compoments.text_watcher_compoments.TextChangeListener;
 import com.teamwork.businessguideprofortiktok.src.utils.Validations;
 
 import java.util.Calendar;

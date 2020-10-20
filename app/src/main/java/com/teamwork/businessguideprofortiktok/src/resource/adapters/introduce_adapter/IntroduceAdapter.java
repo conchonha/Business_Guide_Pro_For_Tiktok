@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.adapters;
+package com.teamwork.businessguideprofortiktok.src.resource.adapters.introduce_adapter;
 
 
 import androidx.annotation.NonNull;
@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 
-import com.teamwork.businessguideprofortiktok.src.resource.fragments.Introduction;
-import com.teamwork.businessguideprofortiktok.src.resource.fragments.Register;
-import com.teamwork.businessguideprofortiktok.src.resource.fragments.Login;
+import com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.Introduction;
+import com.teamwork.businessguideprofortiktok.src.resource.fragments.register_fragment.Register;
+import com.teamwork.businessguideprofortiktok.src.resource.fragments.login_fragment.Login;
 
 import java.util.ArrayList;
 

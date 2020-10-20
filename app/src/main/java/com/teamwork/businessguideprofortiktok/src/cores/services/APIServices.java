@@ -1,9 +1,9 @@
 package com.teamwork.businessguideprofortiktok.src.cores.services;
 
-public class APIServices {
-    private static String baseurl = "https://script.google.com/";
+import com.teamwork.businessguideprofortiktok.src.utils.Constant;
 
+public class APIServices {
     public static DataService getService() {
-        return APIRetrofitClient.getClient(baseurl).create(DataService.class);
+        return APIRetrofitClient.getClient(Constant.mBaseUrlGoogleSheet).create(DataService.class);
     }
 }

@@ -1,5 +1,6 @@
 package com.teamwork.businessguideprofortiktok.src.resource.pages.reponse_cookies_page;
 
+import android.app.Dialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
@@ -12,29 +13,32 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.teamwork.businessguideprofortiktok.R;
-import com.teamwork.businessguideprofortiktok.src.resource.pages.login_page.LoginFirebaseActivity;
+import com.teamwork.businessguideprofortiktok.src.models.callback.CallbackInterface;
+import com.teamwork.businessguideprofortiktok.src.resource.dialog.confirm_dialog.ConfirmDialog;
+import com.teamwork.businessguideprofortiktok.src.resource.dialog.show_loading.ShowLoadingDialog;
+import com.teamwork.businessguideprofortiktok.src.resource.pages.introduce_page.IntroduceActivity;
+import com.teamwork.businessguideprofortiktok.src.resource.viewmodels.reponse_cookies.ReponseCookiesViewmodel;
 
-import java.util.Collections;
-import java.util.Random;
 
-public class ReponseCookiesActivity extends AppCompatActivity {
+public class ReponseCookiesActivity extends AppCompatActivity implements CallbackInterface {
     private TextView mTxtRandom;
     private ImageView mImageCopy;
-    private String[] liststr = {"A","B","C","D","W","R","4","1","8","6","N"};
+    private ReponseCookiesViewmodel mReponseCookiesViewmodel;
+    private String TAG = "ReponseCookiesActivity";
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_back_facebook);
-        Log.d("TAGrandom", "onCreate: "+strRandom());
-        strRandom();
-        initViewRandom();
+        mReponseCookiesViewmodel = ViewModelProviders.of(ReponseCookiesActivity.this).get(ReponseCookiesViewmodel.class);
+        initView();
         setDataView();
         listenerOnclickedView();
-
     }
 
     private void listenerOnclickedView() {
@@ -49,30 +53,37 @@ public class ReponseCookiesActivity extends AppCompatActivity {
     }
 
     private void setDataView() {
-        mTxtRandom.setText(strRandom());
-
+        mTxtRandom.setText(mReponseCookiesViewmodel.getStrRandom());
     }
 
 
-    private void initViewRandom() {
+    private void initView() {
         mTxtRandom = findViewById(R.id.txtRandom);
         mImageCopy = findViewById(R.id.imgCopy);
     }
 
-    private String strRandom(){
-        Random random = new Random();
-        String str = "";
-        for (int i = 0 ; i < liststr.length ; i++){
-            str += liststr[random.nextInt(liststr.length)];
-            Log.d("TAGstr" ,"strRandom: " + str);
-        }
-
-        return  str;
+    public void logout(View view) {
+        ConfirmDialog.showDialogAcount(ReponseCookiesActivity.this, "Sign Out", "Bạn có thật sự muốn thoát", new ReponseCookiesActivity());
     }
 
-    public void logout(View view) {
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(), LoginFirebaseActivity.class));
-        finish();
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        ConfirmDialog.showDialogAcount(ReponseCookiesActivity.this, "Sign Out", "Bạn có thật sự muốn thoát", new ReponseCookiesActivity());
+    }
+
+    @Override
+    public void methodToCallback() {
+        try {
+            Dialog dialog = ShowLoadingDialog.getDialog(ReponseCookiesActivity.this);
+            dialog.show();
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(), IntroduceActivity.class));
+            finish();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d(TAG, "methodToCallback: ");
+        }
+
     }
 }

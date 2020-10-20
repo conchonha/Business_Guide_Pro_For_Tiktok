@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.models;
+package com.teamwork.businessguideprofortiktok.src.models.introduce_model;
 
 public class IntroduceModel {
     String mName;

@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.fragments;
+package com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
