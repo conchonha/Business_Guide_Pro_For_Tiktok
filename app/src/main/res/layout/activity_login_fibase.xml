@@ -82,7 +82,7 @@
             </androidx.cardview.widget.CardView>
 
             <EditText
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="@dimen/size20"
                     android:id="@+id/edt_Email"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -94,7 +94,7 @@
                     android:textColor="#0B0A0A"
                     android:layout_marginTop="70dp"/>
             <EditText
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="@dimen/size20"
                     android:id="@+id/edt_Password"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -106,12 +106,13 @@
                     android:textColor="#0B0A0A"
                     android:layout_marginTop="30dp"/>
 
+
             <androidx.cardview.widget.CardView
                     android:id="@+id/card_login"
                     android:foreground="?attr/selectableItemBackground"
                     android:clickable="true"
                     app:cardCornerRadius="7dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="45dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginLeft="20dp"
                     app:cardBackgroundColor="@color/color_blue"

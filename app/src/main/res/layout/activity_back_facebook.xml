@@ -36,7 +36,7 @@
                     android:background="@drawable/boder_signin"
                     android:onClick="logout"
                     android:text="@string/txt_signout"
-                    android:textColor="@color/color_blue"
+                    android:textColor="@color/color_white"
                     android:textSize="@dimen/size12" />
         </RelativeLayout>
 
@@ -64,7 +64,7 @@
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="@string/txt_3000"
-                android:textColor="@color/color_blue"
+                android:textColor="@color/color_white"
                 android:textSize="@dimen/size30"
                 android:textStyle="bold" />
 

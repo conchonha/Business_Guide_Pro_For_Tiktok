@@ -7,9 +7,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 
-import com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.Introduction;
-import com.teamwork.businessguideprofortiktok.src.resource.fragments.register_fragment.Register;
-import com.teamwork.businessguideprofortiktok.src.resource.fragments.login_fragment.Login;
+import com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.FragmentSlider1;
+import com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.FragmentSlider2;
+import com.teamwork.businessguideprofortiktok.src.resource.fragments.introduce_fragment.FragmentSlider0;
 
 import java.util.ArrayList;
 
@@ -20,9 +20,10 @@ public class IntroduceAdapter extends FragmentPagerAdapter {
     // create constructer viewpager
     public IntroduceAdapter(@NonNull FragmentManager fm) {
         super(fm);
-        arrayFragment.add(new Introduction());
-        arrayFragment.add(new Register());
-        arrayFragment.add(new Login());
+        arrayFragment.add(new FragmentSlider0());
+        arrayFragment.add(new FragmentSlider1());
+        arrayFragment.add(new FragmentSlider2());
+
     }
 
     @NonNull

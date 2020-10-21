@@ -1,95 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="@dimen/size14"
-    android:paddingRight="@dimen/size14"
-    android:gravity="center_horizontal"
-    android:layout_height="match_parent"
-    android:paddingTop="@dimen/size20"
-    android:background="@color/color_black"
-    >
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_blue"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/size14"
+        android:paddingTop="@dimen/size20"
+        android:paddingRight="@dimen/size14">
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="2dp"
-            android:layout_centerVertical="true"
-            android:textSize="@dimen/size14"
-            android:textColor="#fff"
-            android:textStyle="bold"
-            android:text="@string/app_name"/>
-        <Button
-            android:id="@+id/btn_sigin_out"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/boder_signin"
-            android:text="@string/txt_signout"
-            android:textColor="@color/color_blue"
-            android:textSize="@dimen/size12" />
-    </RelativeLayout>
-    <TextView
-        android:id="@+id/txt_Title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="@string/txt_title_loginfb"
-        android:textColor="@color/color_white"
-        android:textSize="@dimen/size20"
-        android:textStyle="bold" />
-    <ImageView
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/icon_money"/>
-    <TextView
-        android:id="@+id/txtMoney"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$0"
-        android:textStyle="bold"
-        android:textColor="@color/color_blue"
-        android:textSize="30dp"/>
-
-    <com.google.android.material.card.MaterialCardView
-        android:layout_marginTop="@dimen/size20"
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        app:cardBackgroundColor="@color/color_blue"
-        app:cardCornerRadius="30dp"
-        android:foreground="?attr/selectableItemBackground"
-        android:clickable="true"
-        android:onClick="login">
-        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <com.makeramen.roundedimageview.RoundedImageView
-                android:layout_width="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_facebook"
-                android:layout_marginLeft="15dp" />
-            <TextView
-                android:paddingLeft="10dp"
-                android:textStyle="bold"
-                android:textSize="@dimen/size18"
-                android:layout_centerInParent="true"
-                android:textColor="@color/color_white"
+            android:layout_height="wrap_content">
+
+        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/txt_voucher"/>
+                android:layout_centerVertical="true"
+                android:padding="2dp"
+                android:text="@string/app_name"
+                android:textColor="#fff"
+                android:textSize="@dimen/size14"
+                android:textStyle="bold" />
+
+        <Button
+                android:id="@+id/btn_sigin_out"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/boder_signin"
+                android:text="@string/txt_signout"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/size12" />
+    </RelativeLayout>
+
+    <TextView
+            android:id="@+id/txt_Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="@string/txt_title_loginfb"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/size20"
+            android:textStyle="bold" />
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/icon_money" />
+
+    <TextView
+            android:id="@+id/txtMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="$0"
+            android:textColor="@color/color_white"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/size20"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="login"
+            app:cardBackgroundColor="@color/color_white"
+            app:cardCornerRadius="30dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                  android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_facebook"
+                    android:id="@+id/ic_facebook"
+                     />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ic_facebook"
+                    android:gravity="center"
+                    android:text="@string/txt_voucher"
+                    android:textColor="@color/color_blue"
+                    android:textSize="@dimen/size18"
+                    android:textStyle="bold" />
         </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>
-
 
 
 </LinearLayout>

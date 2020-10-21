@@ -20,9 +20,10 @@ public class ConfirmDialog {
                 callbackInterface.methodToCallback();
             }
         });
-        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+
+        dialog.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
-            public void onCancel(DialogInterface dialog) {
+            public void onClick(DialogInterface dialog, int which) {
 
             }
         });

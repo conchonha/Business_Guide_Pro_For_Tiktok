@@ -81,7 +81,7 @@
                     android:background="@drawable/boder_text_login"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="@dimen/size20"
                     android:textColor="#0B0A0A" />
 
                 <EditText
@@ -94,7 +94,7 @@
                     android:background="@drawable/boder_text_login"
                     android:hint="UserName"
                     android:inputType="text"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="@dimen/size20"
                     android:textColor="#0B0A0A" />
 
                 <EditText
@@ -107,7 +107,7 @@
                     android:background="@drawable/boder_text_login"
                     android:hint="Password"
                     android:inputType="textPassword"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="@dimen/size20"
                     android:textColor="#0B0A0A" />
 
                 <EditText
@@ -120,7 +120,7 @@
                     android:background="@drawable/boder_text_login"
                     android:hint="Phone number"
                     android:inputType="textPhonetic"
-                    android:paddingLeft="10dp"
+                    android:paddingLeft="@dimen/size20"
                     android:textColor="#0B0A0A" />
 
                 <androidx.cardview.widget.CardView

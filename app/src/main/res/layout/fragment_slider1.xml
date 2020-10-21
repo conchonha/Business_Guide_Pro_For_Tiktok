@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_black"
     android:gravity="center_horizontal"
     android:orientation="vertical">
-
- <LinearLayout
-         android:orientation="vertical"
-         android:layout_width="match_parent"
-         android:gravity="center_horizontal"
-         android:layout_height="match_parent">
      <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
@@ -28,15 +22,7 @@
                  android:textSize="@dimen/size14"
                  android:textStyle="bold" />
 
-         <Button
-                 android:id="@+id/btn_sigin_out"
-                 android:layout_width="wrap_content"
-                 android:layout_height="30dp"
-                 android:layout_alignParentRight="true"
-                 android:background="@drawable/boder_signin"
-                 android:text="@string/txt_signin"
-                 android:textColor="@color/color_blue"
-                 android:textSize="@dimen/size12" />
+
      </RelativeLayout>
 
      <TextView
@@ -73,10 +59,8 @@
              android:layout_height="wrap_content"
              android:layout_marginLeft="70dp"
              android:layout_marginTop="30dp"
+             android:scaleType="fitXY"
              android:layout_marginRight="70dp"
              android:layout_marginBottom="20dp"
-             android:scaleType="fitXY"
              android:src="@drawable/avatar_priview" />
  </LinearLayout>
-
-</androidx.core.widget.NestedScrollView>

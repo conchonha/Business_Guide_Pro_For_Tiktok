@@ -50,5 +50,5 @@
     <string name="txt_phone_invalid" translatable="false">Phone invalidate</string>
     <string name="txt_register_success" translatable="false">Register Success</string>
     <string name="txt_register_error" translatable="false">Account registration is not successful please check again</string>
-
+    <string name="txt_exit" translatable="false">Do you really want to exit</string>
 </resources>

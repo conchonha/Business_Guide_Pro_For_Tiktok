@@ -63,13 +63,13 @@ public class ReponseCookiesActivity extends AppCompatActivity implements Callbac
     }
 
     public void logout(View view) {
-        ConfirmDialog.showDialogAcount(ReponseCookiesActivity.this, "Sign Out", "Bạn có thật sự muốn thoát", new ReponseCookiesActivity());
+        ConfirmDialog.showDialogAcount(ReponseCookiesActivity.this, getResources().getString(R.string.txt_signout), getResources().getString(R.string.txt_exit), ReponseCookiesActivity.this);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        ConfirmDialog.showDialogAcount(ReponseCookiesActivity.this, "Sign Out", "Bạn có thật sự muốn thoát", new ReponseCookiesActivity());
+        //ConfirmDialog.showDialogAcount(ReponseCookiesActivity.this, getResources().getString(R.string.txt_signout), getResources().getString(R.string.txt_exit), new ReponseCookiesActivity());
     }
 
     @Override
@@ -82,8 +82,7 @@ public class ReponseCookiesActivity extends AppCompatActivity implements Callbac
             finish();
         } catch (Exception e) {
             e.printStackTrace();
-            Log.d(TAG, "methodToCallback: ");
+            Log.d(TAG, "methodToCallback: err"+ e.toString());
         }
-
     }
 }
