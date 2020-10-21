@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.viewmodels.google_sheet;
+package com.teamwork.businessguideprofortiktok.src.resource.viewmodels.webview_viewmodel;
 
 import android.text.format.Formatter;
 import android.util.Log;
@@ -8,7 +8,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 
-import com.teamwork.businessguideprofortiktok.src.resource.repositories.GoogleSheetRepository;
+import com.teamwork.businessguideprofortiktok.src.resource.repositories.webview_repository.GoogleSheetRepository;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;

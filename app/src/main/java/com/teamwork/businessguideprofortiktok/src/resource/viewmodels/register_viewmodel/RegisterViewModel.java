@@ -21,12 +21,19 @@ import com.teamwork.businessguideprofortiktok.src.utils.Validations;
 public class RegisterViewModel extends ViewModel {
     public FirebaseAuth mFAuth = FirebaseAuth.getInstance();
     private MutableLiveData<String>mReponse = new MutableLiveData<>();
+    public MutableLiveData<Boolean>mIsLoading = new MutableLiveData<>();
 
     public LiveData<String>getDataReponse(){
         return mReponse;
     }
-    public void registerFirebase(Editable userName, final String email, final String password, String phone){
-        if(Validations.isValidName(userName) && Validations.isEmailValid(email) && Validations.isPasswordValid(password) && Validations.isValidPhoneNumber(phone)){
+
+    public LiveData<Boolean>getIsLoading(){
+        return mIsLoading;
+    }
+
+    public void registerFirebase(String userName, final String email, final String password, String phone){
+        if(!userName.isEmpty() && Validations.isEmailValid(email) && Validations.isPasswordValid(password) && Validations.isValidPhoneNumber(phone)){
+            mIsLoading.setValue(true);
             new AsyncTask<Void,Void,Void>(){
                 @Override
                 protected Void doInBackground(Void... voids) {
@@ -36,7 +43,8 @@ public class RegisterViewModel extends ViewModel {
                             if (task.isSuccessful()) {
                                 mReponse.postValue("Success");
                             } else {
-                                mReponse.postValue("Err");
+                                mReponse.postValue(task.toString());
+                                mIsLoading.postValue(false);
                             }
                         }
                     });

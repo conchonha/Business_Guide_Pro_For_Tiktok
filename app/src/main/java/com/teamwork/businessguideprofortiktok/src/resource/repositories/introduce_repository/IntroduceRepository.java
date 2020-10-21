@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.repositories;
+package com.teamwork.businessguideprofortiktok.src.resource.repositories.introduce_repository;
 
 import androidx.lifecycle.MutableLiveData;
 

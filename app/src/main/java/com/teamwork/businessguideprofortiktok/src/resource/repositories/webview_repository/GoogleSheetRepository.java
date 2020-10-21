@@ -1,4 +1,4 @@
-package com.teamwork.businessguideprofortiktok.src.resource.repositories;
+package com.teamwork.businessguideprofortiktok.src.resource.repositories.webview_repository;
 
 import android.util.Log;
 

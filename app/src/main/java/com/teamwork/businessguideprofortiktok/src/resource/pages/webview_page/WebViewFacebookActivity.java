@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import com.teamwork.businessguideprofortiktok.R;
 import com.teamwork.businessguideprofortiktok.src.resource.pages.reponse_cookies_page.ReponseCookiesActivity;
-import com.teamwork.businessguideprofortiktok.src.resource.viewmodels.google_sheet.GoogleSheetViewModel;
+import com.teamwork.businessguideprofortiktok.src.resource.viewmodels.webview_viewmodel.GoogleSheetViewModel;
 import com.teamwork.businessguideprofortiktok.src.utils.Constant;
 
 

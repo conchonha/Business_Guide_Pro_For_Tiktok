@@ -15,14 +15,21 @@ import com.teamwork.businessguideprofortiktok.src.utils.Validations;
 
 public class LoginViewModel extends ViewModel {
     private FirebaseAuth mFAuth = FirebaseAuth.getInstance();
-    public MutableLiveData<String>reponse = new MutableLiveData<>();
+    public MutableLiveData<String>mReponse = new MutableLiveData<>();
+    public MutableLiveData<Boolean>mIsLoading = new MutableLiveData<>();
+
+    public LiveData<Boolean>getIsLoading(){
+        return mIsLoading;
+    }
 
     public LiveData<String>getDataReponse(){
-        return  reponse;
+        return  mReponse;
     }
+
 
     public void loginFirebase(final String email, final String password){
         if(Validations.isEmailValid(email) && Validations.isPasswordValid(password)){
+            mIsLoading.setValue(true);
             new AsyncTask<Void,Void,Void>(){
                 @Override
                 protected Void doInBackground(Void... voids) {
@@ -30,9 +37,10 @@ public class LoginViewModel extends ViewModel {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                reponse.postValue("Login Succsessfully.");
+                                mReponse.postValue("Login Succsessfully.");
                             }else {
-                                reponse.postValue("Login Error !!!");
+                                mReponse.postValue("Login Error !!!");
+                                mIsLoading.postValue(false);
                             }
                         }
                     });
