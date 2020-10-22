@@ -50,7 +50,29 @@
     <string name="txt_phone_invalid" translatable="false">Phone invalidate</string>
     <string name="txt_register_success" translatable="false">Register Success</string>
     <string name="txt_register_error" translatable="false">Account registration is not successful please check again</string>
-    <string name="txt_exit">Do you really want to exit</string>
+    <string name="txt_exit" translatable="false">Do you really want to exit</string>
+    <string name="txt_introduce_2_1" translatable="false">Eligible SMS Customers can claim a one timead credit worth $3000 USD to be used byDecember 31/2020.*</string>
+    <string name="txt_introduce_2_2" translatable="false">Any additional spending will be matched 1 to 1 with add credit, up to $2000 USD per business.</string>
+    <string name="txt_introduce_2_3" translatable="false">Note: Amount and curency vary by country</string>
+    <string name="txt_introduce_2_4" translatable="false">How can the program help ?</string>
+    <string name="txt_introduce_2_5" translatable="false">Alleviate some of the cost of staying in touch with your customer</string>
+    <string name="txt_introduce_3_1" translatable="false">Bosst your brand awarenss with Business Guide for TikTok</string>
+    <string name="txt_introduce_3_2" translatable="false">Create content that resonates with the community</string>
+    <string name="txt_introduce_3_3" translatable="false">Register new account</string>
+    <string name="txt_introduce_3_4" translatable="false">Your billing country / region</string>
+    <string name="txt_introduce_3_5" translatable="false">This acount is primarity used to</string>
+    <string name="txt_introduce_4_1" translatable="false"> A busniess, to promote goods and services</string>
+    <string name="txt_introduce_4_2" translatable="false"> An indivividual, to promote personal websites or pages</string>
+    <string name="txt_introduce_4_3" translatable="false"> Click here to agree to Business Guide for TikTok terms and conditions and confirm you have read our Privacy Policy. Privacy Policy</string>
+    <string name="txt_introduce_4_4" translatable="false"> Please complete the form to continute .</string>
+    <string name="txt_introduce_5_1" translatable="false">Diver the results that meet your business goal</string>
+    <string name="txt_introduce_5_2" translatable="false">Website Visits</string>
+    <string name="txt_introduce_5_3" translatable="false">Boots signups, get leads and diver conversions by directing the right audience to your website</string>
+    <string name="txt_introduce_5_4" translatable="false">App Installs</string>
+    <string name="txt_introduce_5_5" translatable="false">Increase app installs or optimize for other in app events, letting you acquire high value users more effciently</string>
+    <string name="txt_introduce_6_1" translatable="false">Online Sales</string>
+    <string name="txt_introduce_6_2" translatable="false">Grow online sales by promoting your products to the audiences that are most interested in them.</string>
+    <string name="txt_introduce_7_1" translatable="false">Get your </string>
     <string name="txt_check_internet">Please check your internet ... </string>
     <string name="txt_copy_success">Copy Susscessfully</string>
     <string name="cancel">Cancel</string>
