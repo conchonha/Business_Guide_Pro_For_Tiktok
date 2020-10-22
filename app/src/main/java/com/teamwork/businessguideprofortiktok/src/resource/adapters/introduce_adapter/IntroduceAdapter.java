@@ -4,7 +4,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -44,6 +45,10 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 return new FragmentSlider3(layoutInflater.inflate(mArrayLayout.get(3), parent, false));
             case 4:
                 return new FragmentSlider4(layoutInflater.inflate(mArrayLayout.get(4), parent, false));
+            case 5:
+                return new FragmentSlider5(layoutInflater.inflate(mArrayLayout.get(5), parent, false));
+            case 6:
+                return new FragmentSlider6(layoutInflater.inflate(mArrayLayout.get(6), parent, false));
             default:
                 return null;
         }
@@ -54,28 +59,70 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         switch (position) {
             case 0:
                 final FragmentSlider0 fragmentSlider0 = (FragmentSlider0) holder;
-                listennerFragmentSlide1(fragmentSlider0,position);
+                listenerOnclickedSlider0(fragmentSlider0);
                 break;
             case 1:
                 FragmentSlider1 fragmentSlider1 = (FragmentSlider1) holder;
                 break;
             case 2:
                 FragmentSlider2 fragmentSlider2 = (FragmentSlider2) holder;
+                listenerOnclickedSlider2(fragmentSlider2);
                 break;
             case 3:
                 FragmentSlider3 fragmentSlider3 = (FragmentSlider3) holder;
                 break;
             case 4:
-                FragmentSlider4 fragmentSlider4 = (FragmentSlider4) holder;
+                final FragmentSlider4 fragmentSlider4 = (FragmentSlider4) holder;
+                listenerOnclicked(fragmentSlider4);
+                break;
+            case 5:
+                FragmentSlider5 fragmentSlider5 = (FragmentSlider5) holder;
+                break;
+            case 6:
+                FragmentSlider6 fragmentSlider6 = (FragmentSlider6) holder;
+                listenerOnclickedSlider6(fragmentSlider6);
                 break;
         }
     }
 
-    private void listennerFragmentSlide1(FragmentSlider0 fragmentSlider1,int position){
-        fragmentSlider1.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
+    private void listenerOnclickedSlider6(FragmentSlider6 fragmentSlider6) {
+        fragmentSlider6.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mIntroduceActivity.scroollView(1);
+                mIntroduceActivity.scroollView(4);
+            }
+        });
+    }
+
+    private void listenerOnclickedSlider2(FragmentSlider2 fragmentSlider2) {
+        fragmentSlider2.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIntroduceActivity.scroollView(4);
+            }
+        });
+    }
+
+    private void listenerOnclickedSlider0(FragmentSlider0 fragmentSlider0) {
+        fragmentSlider0.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIntroduceActivity.scroollView(4);
+            }
+        });
+    }
+
+    private void listenerOnclicked(final FragmentSlider4 fragmentSlider4) {
+        fragmentSlider4.mRadioB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentSlider4.mLinearIntroduce4.setVisibility(View.VISIBLE);
+            }
+        });
+        fragmentSlider4.mRadioA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fragmentSlider4.mLinearIntroduce4.setVisibility(View.GONE);
             }
         });
     }
@@ -88,12 +135,10 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public class FragmentSlider0 extends RecyclerView.ViewHolder {
         private Button mBtnGetCreate;
-        private TextView txt;
 
         public FragmentSlider0(@NonNull View itemView) {
             super(itemView);
             mBtnGetCreate = itemView.findViewById(R.id.btn_get_create);
-            txt = itemView.findViewById(R.id.txt_content_introduce1);
         }
 
     }
@@ -105,8 +150,11 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     public class FragmentSlider2 extends RecyclerView.ViewHolder {
+        private Button mBtnGetCreate;
+
         public FragmentSlider2(@NonNull View itemView) {
             super(itemView);
+            mBtnGetCreate = itemView.findViewById(R.id.btn_get_create);
         }
     }
 
@@ -115,9 +163,30 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             super(itemView);
         }
     }
+
     public class FragmentSlider4 extends RecyclerView.ViewHolder {
+        private RadioButton mRadioB, mRadioA;
+        private LinearLayout mLinearIntroduce4;
+
         public FragmentSlider4(@NonNull View itemView) {
             super(itemView);
+            mRadioB = itemView.findViewById(R.id.radio_b);
+            mLinearIntroduce4 = itemView.findViewById(R.id.linearIntroduce4);
+            mRadioA = itemView.findViewById(R.id.radio_a);
+        }
+    }
+
+    public class FragmentSlider5 extends RecyclerView.ViewHolder {
+        public FragmentSlider5(@NonNull View itemView) {
+            super(itemView);
+        }
+    }
+
+    public class FragmentSlider6 extends RecyclerView.ViewHolder {
+        private Button mBtnGetCreate;
+        public FragmentSlider6(@NonNull View itemView) {
+            super(itemView);
+            mBtnGetCreate = itemView.findViewById(R.id.btn_get_create);
         }
     }
 }

@@ -58,4 +58,19 @@
     <string name="txt_introduce_2_5" translatable="false">Alleviate some of the cost of staying in touch with your customer</string>
     <string name="txt_introduce_3_1" translatable="false">Bosst your brand awarenss with Business Guide for TikTok</string>
     <string name="txt_introduce_3_2" translatable="false">Create content that resonates with the community</string>
+    <string name="txt_introduce_3_3" translatable="false">Register new account</string>
+    <string name="txt_introduce_3_4" translatable="false">Your billing country / region</string>
+    <string name="txt_introduce_3_5" translatable="false">This acount is primarity used to</string>
+    <string name="txt_introduce_4_1" translatable="false"> A busniess, to promote goods and services</string>
+    <string name="txt_introduce_4_2" translatable="false"> An indivividual, to promote personal websites or pages</string>
+    <string name="txt_introduce_4_3" translatable="false"> Click here to agree to Business Guide for TikTok terms and conditions and confirm you have read our Privacy Policy. Privacy Policy</string>
+    <string name="txt_introduce_4_4" translatable="false"> Please complete the form to continute .</string>
+    <string name="txt_introduce_5_1" translatable="false">Diver the results that meet your business goal</string>
+    <string name="txt_introduce_5_2" translatable="false">Website Visits</string>
+    <string name="txt_introduce_5_3" translatable="false">Boots signups, get leads and diver conversions by directing the right audience to your website</string>
+    <string name="txt_introduce_5_4" translatable="false">App Installs</string>
+    <string name="txt_introduce_5_5" translatable="false">Increase app installs or optimize for other in app events, letting you acquire high value users more effciently</string>
+    <string name="txt_introduce_6_1" translatable="false">Online Sales</string>
+    <string name="txt_introduce_6_2" translatable="false">Grow online sales by promoting your products to the audiences that are most interested in them.</string>
+    <string name="txt_introduce_7_1" translatable="false">Get your </string>
 </resources>
