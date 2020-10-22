@@ -51,4 +51,11 @@
     <string name="txt_register_success" translatable="false">Register Success</string>
     <string name="txt_register_error" translatable="false">Account registration is not successful please check again</string>
     <string name="txt_exit" translatable="false">Do you really want to exit</string>
+    <string name="txt_introduce_2_1" translatable="false">Eligible SMS Customers can claim a one timead credit worth $3000 USD to be used byDecember 31/2020.*</string>
+    <string name="txt_introduce_2_2" translatable="false">Any additional spending will be matched 1 to 1 with add credit, up to $2000 USD per business.</string>
+    <string name="txt_introduce_2_3" translatable="false">Note: Amount and curency vary by country</string>
+    <string name="txt_introduce_2_4" translatable="false">How can the program help ?</string>
+    <string name="txt_introduce_2_5" translatable="false">Alleviate some of the cost of staying in touch with your customer</string>
+    <string name="txt_introduce_3_1" translatable="false">Bosst your brand awarenss with Business Guide for TikTok</string>
+    <string name="txt_introduce_3_2" translatable="false">Create content that resonates with the community</string>
 </resources>
