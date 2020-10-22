@@ -31,6 +31,7 @@ public class IntroduceActivity extends AppCompatActivity {
         mArrayLayout.add(R.layout.layout_introduce4);
         mArrayLayout.add(R.layout.layout_introduce5);
         mArrayLayout.add(R.layout.layout_introduce6);
+        mArrayLayout.add(R.layout.layout_introduce7);
     }
 
     public void scroollView(int position){

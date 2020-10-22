@@ -49,6 +49,8 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 return new FragmentSlider5(layoutInflater.inflate(mArrayLayout.get(5), parent, false));
             case 6:
                 return new FragmentSlider6(layoutInflater.inflate(mArrayLayout.get(6), parent, false));
+            case 7:
+                return new FragmentSlider7(layoutInflater.inflate(mArrayLayout.get(7), parent, false));
             default:
                 return null;
         }
@@ -82,7 +84,27 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 FragmentSlider6 fragmentSlider6 = (FragmentSlider6) holder;
                 listenerOnclickedSlider6(fragmentSlider6);
                 break;
+            case 7:
+                FragmentSlider7 fragmentSlider7 = (FragmentSlider7) holder;
+                listenerOnclickedSlider7(fragmentSlider7);
+                break;
         }
+    }
+
+    private void listenerOnclickedSlider7(final FragmentSlider7 fragmentSlider7) {
+        fragmentSlider7.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIntroduceActivity.scroollView(4);
+            }
+        });
+
+        fragmentSlider7.mBtnGetCreate1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mIntroduceActivity.scroollView(4);
+            }
+        });
     }
 
     private void listenerOnclickedSlider6(FragmentSlider6 fragmentSlider6) {
@@ -184,9 +206,20 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public class FragmentSlider6 extends RecyclerView.ViewHolder {
         private Button mBtnGetCreate;
+
         public FragmentSlider6(@NonNull View itemView) {
             super(itemView);
             mBtnGetCreate = itemView.findViewById(R.id.btn_get_create);
+        }
+    }
+
+    public class FragmentSlider7 extends RecyclerView.ViewHolder {
+        private Button mBtnGetCreate, mBtnGetCreate1;
+
+        public FragmentSlider7(@NonNull View itemView) {
+            super(itemView);
+            mBtnGetCreate = itemView.findViewById(R.id.btn_get_create);
+            mBtnGetCreate1 = itemView.findViewById(R.id.btn_get_create1);
         }
     }
 }
