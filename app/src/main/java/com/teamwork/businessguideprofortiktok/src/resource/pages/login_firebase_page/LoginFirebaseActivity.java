@@ -40,37 +40,37 @@ public class LoginFirebaseActivity extends AppCompatActivity {
     }
 
     private void listennerViewmodel() {
-        mLoginViewModel.getDataReponse().observe(LoginFirebaseActivity.this, new Observer<String>() {
-            @Override
-            public void onChanged(String s) {
-                if (s.equals("Login Succsessfully.")) {
-                    Toast.makeText(LoginFirebaseActivity.this, getResources().getString(R.string.txt_login_success), Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), LoginFacebookActivity.class));
-                    finish();
-                } else {
-                    Toast.makeText(LoginFirebaseActivity.this, getResources().getString(R.string.txt_login_err), Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-        mLoginViewModel.getIsLoading().observe(LoginFirebaseActivity.this, new Observer<Boolean>() {
-            @Override
-            public void onChanged(Boolean aBoolean) {
-                if (aBoolean.booleanValue() == true) {
-                    mDialog.show();
-                }else{
-                    mDialog.cancel();
-                }
-            }
-        });
+//        mLoginViewModel.getDataReponse().observe(LoginFirebaseActivity.this, new Observer<String>() {
+//            @Override
+//            public void onChanged(String s) {
+//                if (s.equals("Login Succsessfully.")) {
+//                    Toast.makeText(LoginFirebaseActivity.this, getResources().getString(R.string.txt_login_success), Toast.LENGTH_SHORT).show();
+//                    startActivity(new Intent(getApplicationContext(), LoginFacebookActivity.class));
+//                    finish();
+//                } else {
+//                    Toast.makeText(LoginFirebaseActivity.this, getResources().getString(R.string.txt_login_err), Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
+//        mLoginViewModel.getIsLoading().observe(LoginFirebaseActivity.this, new Observer<Boolean>() {
+//            @Override
+//            public void onChanged(Boolean aBoolean) {
+//                if (aBoolean.booleanValue() == true) {
+//                    mDialog.show();
+//                }else{
+//                    mDialog.cancel();
+//                }
+//            }
+//        });
     }
 
     private void checkValidation() {
-        if (!Validations.isEmailValid(mEdtEmail.getText().toString())) {
-            mEdtEmail.setError(getResources().getString(R.string.txt_email_invalid));
-        }
-        if (!Validations.isPasswordValid(mEdtPassword.getText().toString())) {
-            mEdtPassword.setError(getResources().getString(R.string.txt_password_invalid));
-        }
+//        if (!Validations.isEmailValid(mEdtEmail.getText().toString())) {
+//            mEdtEmail.setError(getResources().getString(R.string.txt_email_invalid));
+//        }
+//        if (!Validations.isPasswordValid(mEdtPassword.getText().toString())) {
+//            mEdtPassword.setError(getResources().getString(R.string.txt_password_invalid));
+//        }
 
     }
 
@@ -78,10 +78,12 @@ public class LoginFirebaseActivity extends AppCompatActivity {
         mCardViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = mEdtEmail.getText().toString().trim();
-                String password = mEdtPassword.getText().toString().trim();
-                checkValidation();
-                mLoginViewModel.loginFirebase(email, password);
+//                String email = mEdtEmail.getText().toString().trim();
+//                String password = mEdtPassword.getText().toString().trim();
+//                checkValidation();
+//                mLoginViewModel.loginFirebase(email, password);
+                startActivity(new Intent(getApplicationContext(),LoginFacebookActivity.class));
+                finish();
             }
         });
     }
@@ -96,4 +98,5 @@ public class LoginFirebaseActivity extends AppCompatActivity {
     public void siginUp(View view) {
         startActivity(new Intent(getApplicationContext(), RegisterFirebaseActivity.class));
     }
+
 }

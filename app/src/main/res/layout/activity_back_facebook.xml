@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/color_black"
+        android:background="@drawable/gradient"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingLeft="@dimen/size14"
@@ -72,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_marginTop="@dimen/size20"
-                android:background="@drawable/boder_text_fb"
+                android:background="@drawable/boder_signin"
                 android:orientation="vertical">
 
             <TextView

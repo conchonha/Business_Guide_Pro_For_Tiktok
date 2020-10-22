@@ -21,7 +21,7 @@ public class ConfirmDialog {
             }
         });
 
-        dialog.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
+        dialog.setPositiveButton(context.getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 

@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,13 +14,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".src.resource.pages.register_firebase_page.RegisterFirebaseActivity"/>
-        <activity android:name=".src.resource.pages.login_firebase_page.LoginFirebaseActivity" />
-        <activity android:name=".src.resource.pages.reponse_cookies_page.ReponseCookiesActivity" />
-        <activity android:name=".src.resource.pages.login_facebook_page.LoginFacebookActivity" />
-        <activity android:name=".src.resource.pages.webview_page.WebViewFacebookActivity" />
-        <activity android:name=".src.resource.pages.main_page.MainActivity" />
-        <activity android:name=".src.resource.pages.introduce_page.IntroduceActivity">
+        <activity android:name=".src.resource.pages.register_firebase_page.RegisterFirebaseActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".src.resource.pages.login_firebase_page.LoginFirebaseActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".src.resource.pages.reponse_cookies_page.ReponseCookiesActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".src.resource.pages.login_facebook_page.LoginFacebookActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".src.resource.pages.webview_page.WebViewFacebookActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".src.resource.pages.main_page.MainActivity"
+                android:screenOrientation="portrait"/>
+        <activity android:name=".src.resource.pages.introduce_page.IntroduceActivity"
+                android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
