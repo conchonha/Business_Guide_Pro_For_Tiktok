@@ -42,6 +42,8 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 return new FragmentSlider2(layoutInflater.inflate(mArrayLayout.get(2), parent, false));
             case 3:
                 return new FragmentSlider3(layoutInflater.inflate(mArrayLayout.get(3), parent, false));
+            case 4:
+                return new FragmentSlider4(layoutInflater.inflate(mArrayLayout.get(4), parent, false));
             default:
                 return null;
         }
@@ -62,6 +64,9 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
                 break;
             case 3:
                 FragmentSlider3 fragmentSlider3 = (FragmentSlider3) holder;
+                break;
+            case 4:
+                FragmentSlider4 fragmentSlider4 = (FragmentSlider4) holder;
                 break;
         }
     }
@@ -107,6 +112,11 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public class FragmentSlider3 extends RecyclerView.ViewHolder {
         public FragmentSlider3(@NonNull View itemView) {
+            super(itemView);
+        }
+    }
+    public class FragmentSlider4 extends RecyclerView.ViewHolder {
+        public FragmentSlider4(@NonNull View itemView) {
             super(itemView);
         }
     }

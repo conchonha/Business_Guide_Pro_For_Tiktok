@@ -1,14 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
+<ScrollView android:orientation="vertical"
     android:paddingRight="@dimen/size20"
+    android:background="#80E3DBDB"
+    android:layout_marginTop="@dimen/size20"
     android:paddingLeft="@dimen/size20"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/size30"
+            android:text="Register new account"
+            android:textColor="@color/color_black"
+            android:layout_marginTop="@dimen/size20"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size18"
+            android:layout_marginTop="@dimen/size20"
+            android:textColor="@color/color_black"
+            android:text="Your billing country/region"/>
 
-    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/test_change_text"
+            android:layout_marginTop="15dp">
+            <ImageView
+                android:layout_width="60dp"
+                android:background="#000"
+                android:id="@+id/imgCountry"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/size30"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Armenia (AM)"
+                android:textSize="@dimen/size16"
+                android:textColor="#000"
+                android:layout_toRightOf="@+id/imgCountry"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size20"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size18"
+            android:layout_marginTop="@dimen/size20"
+            android:textColor="@color/color_black"
+            android:text="This acount is primarity used to"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/size20"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/size14"
+                android:id="@+id/radio_a"
+                android:text="A busniess, to promote gôds and services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-</LinearLayout>
+            <RadioButton
+                android:id="@+id/radio_b"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/size14"
+                android:text="An indivividual, to promote personal websites or pages"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RadioGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="@dimen/size18"
+            android:textColor="@color/color_black"
+            android:layout_marginTop="@dimen/size20"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/size16"
+                android:maxLines="1"
+                android:textColor="@color/color_black"
+                android:hint="YYYY"
+                android:inputType="number"
+                android:background="@drawable/test_change_text"
+                android:layout_margin="5dp"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:textSize="@dimen/size16"
+                android:textColor="@color/color_black"
+                android:hint="MM"
+                android:background="@drawable/test_change_text"
+                android:layout_margin="5dp"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:textSize="@dimen/size16"
+                android:textColor="@color/color_black"
+                android:hint="DD"
+                android:background="@drawable/test_change_text"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone number"
+            android:textSize="@dimen/size18"
+            android:textColor="@color/color_black"
+            android:layout_marginTop="@dimen/size20"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/country_picker"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:textColor="@color/color_black"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="@dimen/size16" />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:textSize="@dimen/size16"
+                android:textColor="@color/color_black"
+                android:hint="+84"
+                android:background="@drawable/test_change_text"
+                android:layout_margin="5dp"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone number"
+            android:textSize="@dimen/size18"
+            android:textColor="@color/color_black"
+            android:layout_marginTop="@dimen/size20"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:textSize="@dimen/size16"
+                android:layout_marginTop="@dimen/size20"
+                android:textColor="@color/color_black"
+                android:hint="036"
+                android:background="@drawable/test_change_text"
+                android:layout_margin="5dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
