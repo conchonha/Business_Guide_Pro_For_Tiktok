@@ -26,10 +26,43 @@
     <string name="txt_content_code">Chúc mừng bạn đã nhận được phiếu thưởng trị giá $ 3000 tại TikTok Ads. Có giá trị trong 90 ngày kể từ ngày kích hoạt. Phiếu thưởng sẽ được kích hoạt sau 24 - 48 giờ. Chúng tôi sẽ thông báo cho bạn qua Email sau khi xác nhận đăng ký của bạn và hướng dẫn sử dụng.</string>
     <string name="txt_Your_voucher_code">Mã phiếu thưởng của bạn</string>
     <string name="txt_full_text">Vui lòng điền đầy đủ thông tin</string>
-    <string name="txt_check_internet">Vui lòng kiểm tra kết nối internet của bạn ... </string>
-    <string name="txt_copy_success">Copy thành công</string>
+    <string name="tt_sigup">Đăng ký</string>
+    <string name="txt_agree" >Đồng ý</string>
+
+    <string name="txt_login_success"  >Đăng nhập thành công</string>
+    <string name="txt_login_err"  >Đăng nhập thất bại</string>
+    <string name="txt_email_invalid"  >Kiểm tra email</string>
+    <string name="txt_password_invalid"  >Kiểm tra mật khẩu</string>
+    <string name="txt_name_invalid"  >Kiểm tra tên</string>
+    <string name="txt_phone_invalid"  >Kiểm tra số điện thoại</string>
+    <string name="txt_register_success"  >Đăng ký thành công</string>
+    <string name="txt_register_error"  >Đăng ký tài khoản không thành công vui lòng kiểm tra lại</string>
+    <string name="txt_exit" >Bạn có thực sự muốn thoát</string>
+    <string name="txt_introduce_2_1">Khách hàng SMS đủ điều kiện có thể yêu cầu tín dụng một lần trị giá $ 3000 USD sẽ được sử dụng vào ngày 31 tháng 12 năm 2020 *</string>
+    <string name="txt_introduce_2_2"  >Mọi chi tiêu bổ sung sẽ được đối sánh 1-1 với tín dụng cộng thêm, lên đến $ 2000 USD cho mỗi doanh nghiệp.</string>
+    <string name="txt_introduce_2_3"  >Lưu ý: Số tiền và tiền thưởng khác nhau tùy theo quốc gia</string>
+    <string name="txt_introduce_2_4"  >Chương trình có thể giúp gì?</string>
+    <string name="txt_introduce_2_5"  >Giảm bớt một số chi phí để giữ liên lạc với khách hàng của bạn</string>
+    <string name="txt_introduce_3_1"  >Nâng cao nhận thức về thương hiệu của bạn với Hướng dẫn kinh doanh cho TikTok</string>
+    <string name="txt_introduce_3_2"  >Tạo nội dung gây tiếng vang với cộng đồng</string>
+    <string name="txt_introduce_3_3"  >Đăng ký tài khoản mới</string>
+    <string name="txt_introduce_3_4"  >Quốc gia / khu vực thanh toán của bạn</string>
+    <string name="txt_introduce_3_5"  >Số tiền này là số tiền thường dùng để</string>
+    <string name="txt_introduce_4_1"  > Không kinh doanh, để quảng cáo hàng hóa và dịch vụ</string>
+    <string name="txt_introduce_4_2"  >Cá nhân, để quảng bá các trang web hoặc trang cá nhân</string>
+    <string name="txt_introduce_4_3"  >Nhấp vào đây để đồng ý với Hướng dẫn Kinh doanh cho các điều khoản và điều kiện của TikTok và xác nhận rằng bạn đã đọc Chính sách Bảo mật của chúng tôi. Chính sách bảo mật</string>
+    <string name="txt_introduce_4_4"  >Vui lòng hoàn thành biểu mẫu để tiếp tục.</string>
+    <string name="txt_introduce_5_1"  >Phân tích các kết quả đáp ứng mục tiêu kinh doanh của bạn</string>
+    <string name="txt_introduce_5_2"  >Lượt truy cập trang web</string>
+    <string name="txt_introduce_5_3"  >Thúc đẩy đăng ký, nhận khách hàng tiềm năng và phân bổ chuyển đổi bằng cách hướng đúng đối tượng đến trang web của bạn</string>
+    <string name="txt_introduce_5_4"  >Lượt cài đặt ứng dụng</string>
+    <string name="txt_introduce_5_5"  >Tăng lượt cài đặt ứng dụng hoặc tối ưu hóa cho các sự kiện khác trong ứng dụng, cho phép bạn thu hút người dùng giá trị cao một cách hiệu quả hơn</string>
+    <string name="txt_introduce_6_1"  >Bán hàng trực tuyến</string>
+    <string name="txt_introduce_6_2"  >Tăng doanh số bán hàng trực tuyến bằng cách quảng cáo sản phẩm của bạn cho những đối tượng quan tâm đến chúng nhất.</string>
+    <string name="txt_introduce_7_1"  >Nhận của bạn</string>
     <string name="cancel">Hủy bỏ</string>
-    <string name="txt_exit">Bạn có muốn thoát chương trình không</string>
-    <string name="no_cookies">Không lấy được cookies</string>
+    <string name="txt_check_internet">Vui lòng kiểm tra internet của bạn.</string>
+    <string name="txt_copy_success">Copy thành công</string>
+
 
 </resources>

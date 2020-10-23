@@ -58,18 +58,20 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="@dimen/size30"
-            android:text="Sign-in"
+            android:text="@string/txt_signin"
             android:textColor="@color/color_black"
             android:layout_marginTop="@dimen/size20"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email or Phone number"
+            android:text="@string/txt_mail_or_phone"
             android:textSize="@dimen/size16"
             android:layout_marginBottom="@dimen/size20"
             android:textColor="@color/color_black"
             android:layout_marginTop="@dimen/size20"/>
         <EditText
+            android:inputType="textEmailAddress"
+            android:id="@+id/edt_Email"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:textSize="@dimen/size16"
@@ -79,12 +81,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email or Phone number"
+            android:text="@string/txt_pass"
             android:textSize="@dimen/size16"
             android:layout_marginBottom="@dimen/size20"
             android:textColor="@color/color_black"
             android:layout_marginTop="@dimen/size20"/>
         <EditText
+            android:inputType="textPassword"
+
+            android:id="@+id/edt_Password"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:textSize="@dimen/size16"
@@ -92,6 +97,7 @@
             android:background="@drawable/test_change_text"
             android:layout_margin="5dp"/>
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_login"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             app:cardCornerRadius="@dimen/size30"
@@ -103,7 +109,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Sign-in"
+                android:text="@string/txt_signin"
                 android:gravity="center"
                 android:textColor="@color/color_white"
                 android:textSize="@dimen/size16"

@@ -3,6 +3,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.teamwork.businessguideprofortiktok.R;
@@ -13,6 +15,7 @@ public class IntroduceActivity extends AppCompatActivity {
     private RecyclerView mRecyclerview;
     private IntroduceAdapter mAdapter;
     private ArrayList<Integer>mArrayLayout;
+    private TextView mTxtLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +23,20 @@ public class IntroduceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_introduce);
         init();
         initRecyclerview();
+        listennerOnclickedView();
+    }
+
+    private void listennerOnclickedView() {
+        mTxtLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scroollView(7);
+            }
+        });
     }
 
     private void init() {
+        mTxtLogin = findViewById(R.id.txt_login);
         mArrayLayout = new ArrayList<>();
         mArrayLayout.add(R.layout.layout_introduce0);
         mArrayLayout.add(R.layout.layout_introduce1);
@@ -35,7 +49,7 @@ public class IntroduceActivity extends AppCompatActivity {
     }
 
     public void scroollView(int position){
-        Toast.makeText(this, "co click", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "co click", Toast.LENGTH_SHORT).show();
         mRecyclerview.scrollToPosition(position);
     }
 

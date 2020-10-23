@@ -34,9 +34,10 @@
                 android:background="@drawable/boder_signin"
                 android:paddingLeft="7dp"
                 android:paddingTop="4dp"
+                android:id="@+id/txt_login"
                 android:paddingRight="7dp"
                 android:paddingBottom="4dp"
-                android:text="Sign In"
+                android:text="@string/txt_signin"
                 android:textColor="@color/color_blue"
                 android:textSize="@dimen/size14"
                 android:textStyle="bold" />
