@@ -14,19 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".src.resource.pages.register_firebase_page.RegisterFirebaseActivity"
+        <activity android:name=".src.activity.pages.reponse_cookies_page.ReponseCookiesActivity"
                 android:screenOrientation="portrait"/>
-        <activity android:name=".src.resource.pages.login_firebase_page.LoginFirebaseActivity"
+        <activity android:name=".src.activity.pages.login_facebook_page.LoginFacebookActivity"
                 android:screenOrientation="portrait"/>
-        <activity android:name=".src.resource.pages.reponse_cookies_page.ReponseCookiesActivity"
+        <activity android:name=".src.activity.pages.webview_page.WebViewFacebookActivity"
                 android:screenOrientation="portrait"/>
-        <activity android:name=".src.resource.pages.login_facebook_page.LoginFacebookActivity"
-                android:screenOrientation="portrait"/>
-        <activity android:name=".src.resource.pages.webview_page.WebViewFacebookActivity"
-                android:screenOrientation="portrait"/>
-        <activity android:name=".src.resource.pages.main_page.MainActivity"
-                android:screenOrientation="portrait"/>
-        <activity android:name=".src.resource.pages.introduce_page.IntroduceActivity"
+        <activity android:name=".src.activity.pages.introduce_page.IntroduceActivity"
                 android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".src.resource.pages.introduce_page.IntroduceActivity">
+    tools:context=".src.activity.pages.introduce_page.IntroduceActivity">
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:background="@color/color_black"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@color/color_black"
     android:layout_height="match_parent"
-    tools:context="com.teamwork.businessguideprofortiktok.src.resource.pages.login_firebase_page.LoginFirebaseActivity"
+    tools:context="com.teamwork.businessguideprofortiktok.src.activity.pages.login_firebase_page.LoginFirebaseActivity"
     android:orientation="vertical"
     >
 
