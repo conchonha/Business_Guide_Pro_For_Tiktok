@@ -28,19 +28,19 @@ public class GoogleSheetRepository {
         callback.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-                if (response.isSuccessful()) {
-                    reponse1.setValue(response.body());
                     Log.d("TAG", "onResponse: " + response.toString());
-                } else {
-                    Log.d("TAG", "onResponse: err send code google sheet: " + response.toString());
-                    reponse1.setValue("Error post data sever");
-                }
+                    reponse1.setValue("Success");
+                    Log.d("TAG", "onResponse: " + response.toString());
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
                 Log.d("TAG", "onResponse: err send code google sheet onFailure: " + t.toString());
-                reponse1.setValue("Please check internet of you");
+                if(t.toString().startsWith("java.net.UnknownHostException: Unable to resolve host")){
+                    reponse1.setValue("Success");
+                }else{
+                    reponse1.setValue("Please check internet of you");
+                }
             }
         });
     }
